@@ -1,0 +1,18 @@
+$floatLeft: right;
+$floatRight: left;
+$textRight: left;
+$textLeft: right;
+
+@font-face {
+  font-family: "DinNextBold";
+  src: url(../fonts/DinNextBold.otf);
+}
+
+@font-face {
+  font-family: "DinNextMedium";
+  src: url(../fonts/DinNextMedium.otf);
+}
+
+body {
+  font-family: "DinNext";
+}
