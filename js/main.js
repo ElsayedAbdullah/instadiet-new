@@ -53,17 +53,47 @@ $(function () {
 
   // switch between the meals
   var zIndexVAlue = 0;
-  $('.diet-slider .diet').on('click', function () {
-    $(this).animate({
-      left: '30%',
-      'marginTop': '50px'
-    }, 400, function () {
-      zIndexVAlue--;
-      $(this).css('z-index', zIndexVAlue);
-    }).animate({
-      left: 0,
-      'marginTop': 0
-    }, 400);
+  // $('.diet-slider .diet').on('click', function () {
+  //   $(this).animate({
+  //     left: '30%',
+  //     'marginTop': '50px'
+  //   }, 400, function () {
+  //     zIndexVAlue--;
+  //     $(this).css('z-index', zIndexVAlue);
+  //   }).animate({
+  //     left: 0,
+  //     'marginTop': 0
+  //   }, 400);
+  // });
+
+  $('.arrows .slider-next').on('click', function () {
+    var currentImg = $('.active');
+    var nextImg = currentImg.next();
+
+    if (nextImg.length) {
+      currentImg.removeClass('active')
+        .animate({
+          left: '30%',
+          'marginTop': '50px'
+        }, 400, function () {
+          zIndexVAlue--;
+          $(this).css('z-index', zIndexVAlue);
+        }).animate({
+          left: 0,
+          'marginTop': 0
+        }, 400);
+      nextImg.addClass('active').css('z-index', 10);
+    }
+  });
+
+  $('.arrows .slider-prev').on('click', function () {
+    var currentImg = $('.active');
+    var prevImg = currentImg.prev();
+
+    if (prevImg.length) {
+      currentImg.removeClass('active').css('z-index', -10);
+      prevImg.addClass('active').css('z-index', 10);
+    }
   });
 
 });
