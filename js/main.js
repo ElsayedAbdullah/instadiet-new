@@ -50,4 +50,20 @@ $(function () {
     e.stopPropagation();
   });
 
+
+  // switch between the meals
+  var zIndexVAlue = 0;
+  $('.diet-slider .diet').on('click', function () {
+    $(this).animate({
+      left: '30%',
+      'marginTop': '50px'
+    }, 400, function () {
+      zIndexVAlue--;
+      $(this).css('z-index', zIndexVAlue);
+    }).animate({
+      left: 0,
+      'marginTop': 0
+    }, 400);
+  });
+
 });

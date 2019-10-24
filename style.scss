@@ -1,0 +1,1502 @@
+$primaryColor: #ef5fa2;
+$secondaryColor: #2A338F;
+$floatLeft: left;
+$floatRight: right;
+$textRight: right;
+$textLeft: left;
+$desktop: "(max-width: 1366px)";
+$mobile:"(max-width: 767px)";
+
+@import "rem-sass";
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap');
+
+@font-face {
+  font-family: "DinNext";
+  src: url(../fonts/DinNext.otf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins",
+    sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+html.overlay {
+  overflow: hidden;
+}
+
+body.overlay:after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(#000, 0.5);
+  z-index: 3;
+  margin: 0;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none !important;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media #{$mobile} {
+  .container {
+    padding: 0 30px;
+    position: relative;
+  }
+}
+
+button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.primary-btn {
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  text-transform: capitalize;
+  background: $primaryColor;
+  border-radius: 5px;
+  color: #ffffff !important;
+  border: 0;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  padding: rem(22px 60px 22px 40px);
+
+  @media #{$desktop} {
+    padding: rem(15px 50px 15px 35px);
+    font-size: 16px;
+  }
+
+  &:hover {
+    background-color: darken($primaryColor, 5);
+
+    i {
+      right: 25px;
+    }
+  }
+
+  i {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+.heading {
+  font-weight: 600;
+  font-size: rem(36px);
+  line-height: rem(48px);
+  color: $secondaryColor;
+
+  @media #{$mobile} {
+    font-size: rem(24px);
+    line-height: rem(32px);
+  }
+
+}
+
+/* Start Header */
+header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0px 8px 18px rgba(206, 208, 224, 0.25);
+
+  .navbar {
+    padding: rem(15px 0);
+
+    @media #{$desktop} {
+      padding: rem(15px 0);
+    }
+
+    @media #{$mobile} {
+      position: absolute !important;
+      z-index: 9999;
+      width: 100%;
+      background-color: #fff;
+
+      &.navbar-expand-lg>.container {
+        padding: 0 20px;
+      }
+
+      .navbar-brand {
+        order: 1;
+      }
+
+      .navbar-collapse {
+        order: 4;
+        box-shadow: 0px 8px 18px inset rgba(206, 208, 224, 0.25);
+        margin: 20px -20px 0;
+        padding: 20px 20px 0;
+      }
+
+    }
+
+    .the-button {
+      display: none;
+      height: 32px;
+      width: 32px;
+      cursor: pointer;
+
+      @media #{$mobile} {
+        display: block;
+        background: none;
+        border: 0;
+        order: 2
+      }
+
+      .the-line {
+        display: block;
+        height: 2px;
+        background-color: #595A6E;
+        width: 24px;
+        margin: 5px auto;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+
+    .transformed {
+
+      .the-line:first-child {
+        transform: rotate(-45deg) translate(-4px, 6px);
+        width: 75%;
+      }
+
+      .the-line:nth-child(2) {
+        opacity: 0;
+      }
+
+      .the-line:last-child {
+        transform: rotate(45deg) translate(-4px, -6px);
+        width: 75%;
+      }
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        font-size: 14px;
+        line-height: 16px;
+        color: #656678;
+        padding: 12px;
+        transition: color 0.4s ease-in-out;
+
+        @media #{$mobile} {
+          padding-left: 5px !important;
+        }
+
+        .arabic {
+          font-family: "DinNext";
+        }
+
+        &.sign-in {
+          padding-left: 2rem;
+          padding-right: 1.4rem;
+
+          @media #{$mobile} {
+            border-top: 1px solid #DADAE0;
+            margin: 15px -20px 0;
+            padding-left: 25px !important;
+            padding-top: 25px;
+
+          }
+        }
+      }
+    }
+  }
+
+  .start-diet {
+    background-color: $primaryColor;
+    border-radius: 3px;
+    padding: rem(10px 24px);
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.4s ease-in-out;
+
+    @media #{$mobile} {
+      order: 3;
+    }
+
+    &:hover {
+      background-color: darken($primaryColor, 5);
+    }
+  }
+
+  .navbar-light .navbar-nav .nav-link:focus,
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: $primaryColor;
+  }
+}
+
+/* End Header */
+
+/* Start showcase */
+.showcase {
+  overflow: hidden;
+  background-color: #f6f7f9;
+  height: 100vh;
+  background: url(../imgs/instadiet-bg.jpg) center center no-repeat/cover;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding-top: 80px;
+
+  @media #{$desktop} {
+    padding-top: 0;
+  }
+
+  @media #{$mobile} {
+    padding-top: 11rem;
+    height: auto;
+
+    .container {
+      padding: 0 20px;
+    }
+  }
+
+  .showcase-content {
+    height: 50vh;
+
+    .showcase-title {
+      font-weight: 600;
+      font-size: 3rem;
+      line-height: 1.3;
+      color: $secondaryColor;
+      margin-bottom: 1rem;
+
+      @media #{$mobile} {
+        margin-bottom: 0.5rem;
+        font-size: rem(24px);
+        line-height: rem(32px);
+      }
+    }
+
+    .showcase-desc {
+      font-size: 18px;
+      line-height: 24px;
+      color: #9d9eae;
+      margin-bottom: 2rem;
+      width: 80%;
+
+      @media #{$mobile} {
+        font-size: 14px;
+        line-height: 22px;
+        width: 80%;
+        margin: 0 auto 1.5rem;
+      }
+    }
+
+    .showcase-list {
+      margin-bottom: 30px;
+
+      li {
+
+        line-height: 1.8;
+        color: #9D9EAE;
+
+        i {
+          color: $primaryColor;
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+
+}
+
+/* End showcase */
+
+/* Start empathy pink */
+.empathy {
+  background-color: $primaryColor;
+  padding: 50px;
+
+  .row {
+    align-items: center;
+  }
+
+  .empathy-content {
+    color: #fff;
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    p {
+      line-height: 1.7;
+      color: #f2f2f2;
+    }
+  }
+
+  .empathy-btn {
+    text-align: $textRight;
+
+    button {
+      background-color: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 10px 40px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+
+/* End empathy pink */
+
+/* Start empathy blue */
+.empathy-blue {
+  background-color: $secondaryColor;
+  padding: 50px;
+
+  .row {
+    align-items: center;
+  }
+
+  .empathy-content {
+    color: #fff;
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    p {
+      line-height: 1.7;
+      color: #f2f2f2;
+    }
+  }
+
+  .empathy-btn {
+    text-align: $textRight;
+
+    button {
+      background-color: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 10px 40px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+/* End empathy blue */
+
+/* Start Cards */
+.cards {
+  background-color: #F7F8FC;
+  padding: 50px 0;
+  border-top: 1px solid #F0F0F5;
+
+  @media #{$mobile} {
+    margin-top: 0;
+    padding: 30px 0 18px;
+
+    .container {
+      padding: 0 20px;
+    }
+  }
+
+  .card-item {
+    padding: 20px 40px;
+    background: #FEFEFE;
+    border: 1px solid #E4E5F0;
+    box-shadow: rem(0px 8px 15px rgba(213, 215, 232, 0.3));
+    border-radius: rem(10px);
+    display: flex;
+    align-items: center;
+
+    @media #{$desktop} {
+      height: 7rem;
+    }
+
+    @media #{$mobile} {
+      width: 100%;
+      margin-bottom: 12px;
+      padding: 0 20px;
+    }
+
+    .icon {
+      width: rem(72px);
+      height: rem(72px);
+      border-radius: 50%;
+      background-color: #EBEBF0;
+      margin-right: rem(15px);
+      text-align: center;
+      line-height: rem(72px);
+
+      @media #{$mobile} {
+        margin-left: 0;
+      }
+    }
+
+    p {
+      font-size: rem(16px);
+      line-height: rem(24px);
+      color: #595A6E;
+      width: 55%;
+
+      @media #{$mobile} {
+        width: 69%;
+      }
+    }
+  }
+}
+
+/* End Cards */
+
+/* Start tailored Plan */
+.tailored-plan {
+  padding: 100px 0 170px;
+
+  @media #{$mobile} {
+    border-top: 1px solid #F5F5FA;
+    padding-bottom: 60px;
+
+    .container {
+      padding: 0 15px;
+    }
+  }
+
+  .left-content {
+
+    @media #{$mobile} {
+      padding-left: 23px;
+      padding-right: 23px;
+    }
+
+    h2 {
+      margin-bottom: rem(40px);
+
+      @media #{$mobile} {
+        width: 70%;
+        margin-bottom: rem(14px);
+      }
+
+      span {
+        color: $primaryColor;
+      }
+    }
+
+    h3 {
+      color: $secondaryColor;
+      margin-bottom: rem(8px);
+    }
+
+    p {
+      font-size: rem(16px);
+      line-height: rem(28px);
+      color: #9D9EAE;
+      margin-bottom: rem(40px);
+      width: 81%;
+
+      @media #{$mobile} {
+        width: 100%;
+        font-size: rem(14px);
+        line-height: 24px;
+      }
+    }
+
+    a {
+      display: inline-block;
+      cursor: pointer;
+
+      @media #{$mobile} {
+        width: 100%;
+        padding: 19px 25px 19px 30px;
+      }
+    }
+  }
+
+  .right-content {
+    @media #{$mobile} {
+      padding-top: rem(60px);
+    }
+
+    .diet-plan {
+      .diet-plan-header {
+        position: relative;
+
+        h3 {
+          font-weight: 600;
+          font-size: rem(18px);
+          line-height: rem(16px);
+          color: #656678;
+          margin-left: rem(5px);
+
+          @media #{$mobile} {
+            font-size: rem(14px);
+
+          }
+        }
+
+      }
+
+      .diet-slider {
+        position: relative;
+        min-height: 524px;
+        z-index: 1;
+
+        @media #{$mobile} {
+          min-height: 333px;
+        }
+
+        .diet {
+          position: absolute;
+          top: 24px;
+          box-shadow: 0px 68px 121px rgba(0, 0, 0, 0.07);
+          border-radius: 8px;
+
+          @media #{$mobile} {
+            top: 9px;
+          }
+
+          &.one {
+            transform: scale(0.8) translate(145px);
+
+          }
+
+          &.two {
+            transform: scale(0.9) translate(70px);
+
+            @media #{$mobile} {
+              transform: scale(0.9) translate(27px);
+            }
+          }
+
+          &.three {
+            transform: scale(1) translate(0);
+
+            @media #{$mobile} {
+              transform: scale(0.8) translate(60px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* End tailored Plan */
+
+/* Start Keep Tracking */
+.keep-tracking {
+  background: url(../imgs/keep-tracking-bg.png)no-repeat center center/cover;
+  overflow: visible;
+  margin-top: 100px;
+
+  @media #{$mobile} {
+    background: url(../imgs/keep-tracking-bg-m.png)no-repeat center top/cover;
+  }
+
+  .keep-tracking-content {
+    position: relative;
+    z-index: 2;
+
+    img {
+      margin-top: 130px;
+      margin-bottom: 26px;
+
+      @media #{$mobile} {
+        margin-top: 60px;
+        transform: scale(0.7);
+        margin-left: -15px;
+        margin-bottom: 15px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 28px;
+      color: #595A6E;
+      margin-top: 22px;
+      margin-bottom: 130px;
+      width: 60%;
+
+      @media #{$mobile} {
+        font-size: 14px;
+        line-height: 24px;
+        width: 90%;
+        margin-top: 12px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  .keep-tracking-img {
+    position: relative;
+
+    @media #{$mobile} {
+      height: 475px;
+    }
+
+    .spark {
+      top: -75px;
+      left: -15px;
+      position: absolute;
+
+      @media #{$mobile} {
+        top: -15px;
+        left: -30px;
+        transform: scale(0.6);
+      }
+    }
+
+    .iphone {
+      position: absolute;
+      z-index: 1;
+      left: -817px;
+      top: -209px;
+      transform: scale(0.65);
+
+      @media #{$mobile} {
+        top: -10px;
+        left: 48.5%;
+        transform: scale(0.95) translateX(-50%);
+        position: relative;
+
+        &:before {
+          content: "";
+          background-image: url(../imgs/spark.svg);
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}
+
+/* End Keep Tracking */
+
+/* Start on The Medi */
+.on-the-media {
+  padding: 45px 0;
+
+  @media #{$mobile} {
+    padding: 30px 0;
+  }
+
+  p {
+    text-align: $textLeft;
+    width: 70%;
+    margin: auto;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #9d9eae;
+  }
+
+  .media-channel {
+    border: 1px solid #f2f3fa;
+    border-radius: 5px;
+    height: 5.5rem;
+    width: 70%;
+    margin: auto;
+    line-height: 5.5rem;
+    text-align: center;
+
+    @media #{$mobile} {
+      border: 0;
+      width: 100%;
+    }
+
+    @media #{$desktop} {
+      height: 5rem;
+      line-height: 5rem;
+    }
+  }
+}
+
+/* End on The Medi */
+
+/* Start prices */
+.prices {
+  background: url(../imgs/prices-bg.png) center center no-repeat/cover;
+  position: relative;
+  padding: 100px 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .price-plan {
+    position: relative;
+    z-index: 2;
+    width: 60%;
+    margin: auto;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+
+    h3 {
+      font-size: 24px;
+      color: #6e6e6e;
+    }
+
+    .price-item {
+      position: relative;
+
+      .price {
+        font-size: 60px;
+        color: #6e6e6e;
+        font-weight: bold;
+      }
+
+      .dollar {
+        color: #6e6e6e;
+        position: absolute;
+        top: 15px;
+        left: 30%;
+        font-size: 20px;
+      }
+    }
+
+    .long {
+      font-size: 15px;
+      color: #777;
+      margin-bottom: 15px;
+    }
+
+    .features {
+      text-align: center;
+      padding-left: 30px;
+      margin-bottom: 20px;
+
+      li {
+        color: #999;
+        text-align: left;
+
+        i {
+          color: $primaryColor;
+          margin-right: 10px;
+          font-size: 13px;
+        }
+      }
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      text-transform: capitalize;
+    }
+
+  }
+
+  .price-content {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+
+    h2 {
+      color: #f4f4f4;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 70%;
+      line-height: 1.5;
+    }
+
+    .price-desc {
+      border: 1px solid #ccc;
+      padding: 10px;
+
+      &+p {
+        margin-top: 30px;
+
+        span {
+          font-weight: bold;
+        }
+      }
+
+    }
+
+  }
+}
+
+/* End prices */
+
+
+
+/* Start Ideal Body Weight */
+.body-weight {
+  padding: 140px 0;
+  background: linear-gradient(360deg, #F5F5FA 0%, rgba(245, 245, 250, 0) 100%);
+  border-top: 1px solid #F0F0F5;
+
+  @media #{$desktop} {
+    padding: 80px 0;
+  }
+
+  @media #{$mobile} {
+    background: #F7F8FC;
+    padding: 60px 0;
+
+    .container {
+      padding: 0 30px;
+
+      .width,
+      .height {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom: 46px;
+
+    @media #{$mobile} {
+      margin-bottom: 35px;
+    }
+  }
+
+  .triangle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media #{$mobile} {
+      position: relative;
+      top: 0;
+      transform: translateX(-50%) rotate(90deg);
+      margin-bottom: 20px;
+    }
+  }
+
+  .instadiet-analysis {
+    position: relative;
+    perspective: 1000;
+    width: 100%;
+    height: 100%;
+
+    @media #{$mobile} {
+      height: 500px;
+    }
+
+    &>div {
+      position: absolute;
+      transition: all 0.5s ease-in-out;
+      backface-visibility: hidden;
+      height: 100%;
+      width: 100%;
+    }
+
+
+    .front {
+      background-color: #FFFFFF;
+      border-radius: 8px;
+      z-index: 3;
+
+      h3 {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        color: #0C0E2A;
+
+        img {
+          margin: 16px 8px 16px 32px;
+        }
+      }
+
+      .bmi {
+        border-top: 1px solid #E7E7E7;
+        border-bottom: 1px solid #E7E7E7;
+        position: relative;
+
+        .bmi-bar {
+          margin: 0 32px;
+          height: 10px;
+          border-radius: 5px;
+          padding: 82px 0 71px 0;
+
+
+          span {
+            width: 20%;
+            height: 10px;
+            float: $floatLeft;
+          }
+
+          .one {
+            background: #2A338F;
+            opacity: 0.4;
+            border-radius: 5px 0px 0px 5px;
+          }
+
+          .two {
+            background: #2A338F;
+            opacity: 0.7;
+          }
+
+          .three {
+            background: #2A338F;
+            opacity: 0.8;
+          }
+
+          .four {
+            background: #2A338F;
+            opacity: 0.9;
+          }
+
+          .five {
+            background: #2A338F;
+            border-radius: 0px 5px 5px 0px;
+          }
+        }
+
+        .indicator {
+          position: absolute;
+          bottom: 25px;
+          right: 20%;
+
+          &:before {
+            content: "";
+            height: 50px;
+            width: 2px;
+            position: absolute;
+            background-color: $primaryColor;
+            top: -53px;
+            right: 60%;
+          }
+
+          &:after {
+            content: "You";
+            height: 32px;
+            width: 63px;
+            position: absolute;
+            background-color: #ef5fa2;
+            border-radius: 212px;
+            top: -85px;
+            right: 36%;
+            color: #fff;
+            text-align: right;
+            line-height: 32px;
+            background-image: url(../imgs/woman.svg);
+            background-repeat: no-repeat;
+            background-position: 9px center;
+            padding: 0 9px;
+
+            @media #{$mobile} {
+              font-size: 13px;
+              padding: 0 12px;
+              background-position: 12px center;
+            }
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            color: #2A338F;
+
+            @media #{$mobile} {
+              font-size: 14px;
+            }
+
+            span {
+              font-weight: 600;
+            }
+          }
+        }
+
+      }
+
+      .tips {
+        padding-top: 26px;
+        padding-left: 50px;
+
+        @media #{$mobile} {
+          padding: 20px;
+
+          button {
+            font-size: 14px;
+          }
+        }
+
+        p {
+          font-size: 13px;
+          line-height: 18px;
+          color: #0C0E2A;
+          width: 60%;
+          margin-bottom: 20px;
+
+          @media #{$mobile} {
+            width: 90%;
+          }
+
+          span {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 18px;
+            color: #EF5FA2;
+
+          }
+        }
+
+        ul {
+          margin-bottom: 28px;
+
+          li {
+            font-size: 13px;
+            line-height: 18px;
+            color: #808191;
+            position: relative;
+            padding-left: 23px;
+
+            &:before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              background-image: url(../imgs/check-green.svg);
+              width: 16px;
+              height: 16px;
+              background-repeat: no-repeat;
+            }
+
+            &:not(:last-child) {
+              margin-bottom: 8px;
+            }
+
+            img {
+              margin-right: 6px
+            }
+          }
+        }
+
+        #convertToForm {
+          @media #{$mobile} {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+          }
+
+        }
+      }
+    }
+
+    .back {
+      background-color: #fff;
+      color: $secondaryColor;
+      transform: rotateY(180deg);
+      padding: 30px;
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 26px;
+        color: #595A6E;
+      }
+
+      .form-control {
+        border: 1px solid #E4E5F0;
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 20px 32px;
+        height: auto;
+        outline: none;
+        box-shadow: none;
+
+        @media #{$mobile} {
+          padding: 18px 28px;
+        }
+      }
+    }
+  }
+
+}
+
+/* End Ideal Body Weight */
+
+
+/* Start FAQ */
+#faq {
+  padding-top: rem(100px);
+  padding-bottom: rem(75px);
+  border-top: 1px solid #F0F0F5;
+
+  @media #{$mobile} {
+    padding: 60px 0;
+  }
+
+  h2 {
+    margin-bottom: rem(50px);
+
+    @media #{$mobile} {
+      margin-bottom: rem(32px);
+    }
+  }
+
+  .faq-left-side,
+  .faq-right-side {
+    li {
+      margin-bottom: rem(40px);
+
+      @media #{$mobile} {
+        margin-bottom: rem(40px);
+      }
+
+      h3 {
+        font-weight: 600;
+        font-size: rem(16px);
+        line-height: rem(22px);
+        color: #0C0E2A;
+        position: relative;
+        margin-bottom: rem(10px);
+        padding-left: rem(24px);
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: rem(5px);
+          left: 0;
+          background-color: $primaryColor;
+          width: rem(12px);
+          height: rem(12px);
+          border-radius: 50%;
+        }
+      }
+
+      p {
+        font-size: rem(16px);
+        line-height: rem(28px);
+        color: #9D9EAE;
+        width: 85%;
+      }
+    }
+  }
+
+  .faq-button {
+    width: 100%;
+    background-color: #CACCE0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+/* End FAQ */
+
+/* Start Footer */
+#main-footer {
+  position: relative;
+
+  @media #{$mobile} {
+    text-align: center;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .policy,
+  .links,
+  .contact {
+    @media #{$mobile} {
+      margin-bottom: 68px;
+    }
+
+    li {
+      font-size: rem(14px);
+      line-height: rem(35px);
+
+      a {
+        color: #595A6E;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+
+  .contact {
+    li {
+      line-height: rem(46px);
+
+      &:nth-child(1) {
+        img {
+          margin-right: 10px;
+        }
+      }
+
+      img {
+        transform: scale(0.75);
+      }
+
+      &:nth-child(2) {
+        img {
+          position: relative;
+          right: 5px;
+        }
+
+        a {
+          margin-left: 0px;
+        }
+      }
+
+      &.location {
+        overflow: hidden;
+
+        @media #{$mobile} {
+          width: 75%;
+          margin: auto;
+        }
+
+        img {
+          float: $floatLeft;
+          margin-right: 15px;
+          margin-bottom: 40px;
+        }
+
+        p {
+          float: $floatLeft;
+          color: #595A6E;
+          line-height: 1.7;
+          width: 65%;
+
+          @media #{$mobile} {
+            width: 75%;
+            text-align: left;
+            position: relative;
+            top: 7px;
+          }
+        }
+      }
+    }
+  }
+
+  .newsletter {
+    p {
+      font-size: rem(14px);
+      line-height: rem(35px);
+      color: #595A6E;
+    }
+  }
+
+  form {
+    background: #FEFEFE;
+    border: 1px solid #E4E5F0;
+    box-shadow: 0px 8px 8px rgba(213, 215, 232, 0.25);
+    border-radius: 5px;
+    width: rem(270px);
+    height: rem(48px);
+    line-height: rem(48px);
+    padding-left: rem(24px);
+    margin-top: rem(10px);
+    margin-bottom: rem(24px);
+
+    @media #{$mobile} {
+      margin: 7px auto 15px;
+    }
+
+    input[type="email"] {
+      border: 0;
+      font-size: 13px;
+      line-height: 28px;
+      outline: none;
+      width: 60%;
+
+      &::-webkit-input-placeholder {
+        color: #595A6E;
+      }
+
+      &:focus {
+        &::-webkit-input-placeholder {
+          opacity: 0.4;
+          transition: opacity 0.4s ease-in-out;
+        }
+      }
+    }
+
+    button[type="submit"] {
+      border: 0;
+      background-color: transparent;
+      font-weight: 600;
+      font-size: rem(14px);
+      text-transform: uppercase;
+      color: $primaryColor;
+      width: 38%;
+    }
+  }
+
+  .social-icons {
+    li {
+      &:not(:last-child) {
+        margin-right: rem(15px);
+      }
+
+      a {
+        color: #808191;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+          color: $primaryColor
+        }
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: rem(40px);
+    border-top: 1px solid #f0f0f5;
+    padding-top: rem(27px);
+    padding-bottom: rem(30px);
+
+    @media #{$desktop} {
+      margin-top: rem(40px);
+      padding-top: rem(20px);
+      padding-bottom: rem(40px);
+    }
+
+    @media #{$mobile} {
+      margin-top: rem(90px);
+      padding-bottom: 0;
+      padding-top: rem(60px);
+    }
+
+
+    p {
+      text-align: $textRight;
+      font-size: rem(13px);
+      line-height: rem(35px);
+      color: #595A6E;
+
+      @media #{$mobile} {
+        text-align: center;
+      }
+    }
+  }
+
+
+}
+
+/* End Footer */
+
+/* Start Scroll-To-Top */
+.scroll-top {
+  width: rem(50px);
+  height: rem(50px);
+  border-radius: 50%;
+  text-align: center;
+  position: fixed;
+  bottom: rem(40px);
+  right: 10px;
+  border: 1px solid #777;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  background-color: #fff;
+  display: none;
+
+  @media #{$desktop} {
+    bottom: rem(70px);
+  }
+
+  @media #{$mobile} {
+    bottom: 90px;
+    background-color: #fff;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  &:hover {
+    border-color: $primaryColor;
+
+    p {
+      color: $primaryColor;
+    }
+  }
+
+  img {
+    margin-top: 8px;
+    margin-bottom: 3px;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: rem(12px);
+    line-height: rem(16px);
+    text-transform: uppercase;
+    color: #9D9EAE;
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+/* End Scroll-To-Top */
