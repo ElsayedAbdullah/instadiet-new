@@ -67,33 +67,39 @@ $(function () {
   // });
 
   $('.arrows .slider-next').on('click', function () {
-    var currentImg = $('.active');
-    var nextImg = currentImg.next();
 
-    if (nextImg.length) {
-      currentImg.removeClass('active')
-        .animate({
-          left: '30%',
-          'marginTop': '50px'
-        }, 400, function () {
-          zIndexVAlue--;
-          $(this).css('z-index', zIndexVAlue);
-        }).animate({
-          left: 0,
-          'marginTop': 0
-        }, 400);
-      nextImg.addClass('active').css('z-index', 10);
+    var nextImg = $('.diet.active').next('.diet');
+    if (nextImg.length == 0) {
+      nextImg = $('.diet-slider .diet:first');
     }
+    $('.diet.active').removeClass('active');
+    nextImg.addClass('active');
+    checkActiveClass();
   });
+
 
   $('.arrows .slider-prev').on('click', function () {
-    var currentImg = $('.active');
-    var prevImg = currentImg.prev();
 
-    if (prevImg.length) {
-      currentImg.removeClass('active').css('z-index', -10);
-      prevImg.addClass('active').css('z-index', 10);
+    var prevImg = $('.diet.active').prev('.diet');
+    if (prevImg.length == 0) {
+      prevImg = $('.diet-slider .diet:last');
     }
+    $('.diet.active').removeClass('active');
+    prevImg.addClass('active');
+    checkActiveClass();
   });
+
+  // check the active class on diet and change the title
+  function checkActiveClass() {
+    if ($('.diet:first').hasClass("active")) {
+      $('.diet-plan-header h3').text('Paleo Diet');
+    }
+    if ($('.diet').eq(1).hasClass("active")) {
+      $('.diet-plan-header h3').text('Ketogenic Diet');
+    }
+    if ($('.diet:last').hasClass("active")) {
+      $('.diet-plan-header h3').text('Vegeterian Diet');
+    }
+  }
 
 });

@@ -6,6 +6,9 @@ $textRight: right;
 $textLeft: left;
 $desktop: "(max-width: 1366px)";
 $mobile:"(max-width: 767px)";
+$tablet: "(min-width: 768px) and (max-width: 992px)";
+$maxTab: "(max-width: 992px)";
+$betweentabdesk: "(min-width: 1000px) and (max-width: 1200px)";
 
 @import "rem-sass";
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap');
@@ -93,7 +96,7 @@ ul {
 
 @media #{$mobile} {
   .container {
-    padding: 0 30px;
+    padding: 0 20px;
     position: relative;
   }
 }
@@ -166,11 +169,12 @@ header {
       padding: rem(15px 0);
     }
 
+    @media #{$tablet} {
+      padding-bottom: 20px;
+    }
+
     @media #{$mobile} {
-      position: absolute !important;
-      z-index: 9999;
-      width: 100%;
-      background-color: #fff;
+
 
       &.navbar-expand-lg>.container {
         padding: 0 20px;
@@ -195,11 +199,15 @@ header {
       width: 32px;
       cursor: pointer;
 
-      @media #{$mobile} {
+      @media #{$maxTab} {
         display: block;
         background: none;
         border: 0;
-        order: 2
+        order: 0
+      }
+
+      @media #{$mobile} {
+        order: 3;
       }
 
       .the-line {
@@ -231,6 +239,13 @@ header {
   }
 
   .navbar-nav {
+    @media #{$tablet} {
+      margin-bottom: 20px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #eee;
+    }
+
     .nav-item {
       .nav-link {
         font-size: 14px;
@@ -308,15 +323,28 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
+
+    @media #{$tablet} {
+      background-position-x: 30%;
+    }
+
+    @media #{$mobile} {
+      background: none;
+    }
   }
 
-  @media #{$desktop} {
-    padding-top: 0;
-  }
+
 
   @media #{$mobile} {
-    padding-top: 11rem;
-    height: auto;
+    padding-top: 14rem;
+    position: relative;
+    text-align: center;
+
+    .showcase-bg {
+      position: absolute;
+      top: -270px;
+      left: -190px;
+    }
 
     .container {
       padding: 0 20px;
@@ -337,8 +365,9 @@ header {
 
       @media #{$mobile} {
         margin-bottom: 0.5rem;
-        font-size: rem(24px);
-        line-height: rem(32px);
+        font-size: 31px;
+        line-height: 45px;
+        text-align: center;
       }
     }
 
@@ -350,8 +379,8 @@ header {
       width: 80%;
 
       @media #{$mobile} {
-        font-size: 14px;
-        line-height: 22px;
+        font-size: 16px;
+        line-height: 28px;
         width: 80%;
         margin: 0 auto 1.5rem;
       }
@@ -378,9 +407,18 @@ header {
 /* End showcase */
 
 /* Start empathy pink */
-.empathy {
+.empathy,
+.empathy-blue {
   background-color: $primaryColor;
   padding: 50px;
+
+  @media #{$tablet} {
+    padding: 40px;
+  }
+
+  @media #{$mobile} {
+    padding: 20px;
+  }
 
   .row {
     align-items: center;
@@ -393,16 +431,36 @@ header {
       margin-bottom: 20px;
       font-size: 28px;
       font-weight: bold;
+
+      @media #{$tablet} {
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 1.3;
+      }
+
+      @media #{$mobile} {
+        font-size: 20px;
+        font-weight: 500;
+      }
     }
 
     p {
       line-height: 1.7;
       color: #f2f2f2;
+
+      @media #{$mobile} {
+        font-size: 15px
+      }
     }
   }
 
   .empathy-btn {
     text-align: $textRight;
+
+    @media #{$mobile} {
+      text-align: center;
+      margin-top: 30px;
+    }
 
     button {
       background-color: transparent;
@@ -410,6 +468,10 @@ header {
       border: 1px solid #fff;
       padding: 10px 40px;
       text-transform: capitalize;
+
+      @media #{$tablet} {
+        padding: 10px 30px;
+      }
     }
   }
 }
@@ -420,38 +482,6 @@ header {
 /* Start empathy blue */
 .empathy-blue {
   background-color: $secondaryColor;
-  padding: 50px;
-
-  .row {
-    align-items: center;
-  }
-
-  .empathy-content {
-    color: #fff;
-
-    h2 {
-      margin-bottom: 20px;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    p {
-      line-height: 1.7;
-      color: #f2f2f2;
-    }
-  }
-
-  .empathy-btn {
-    text-align: $textRight;
-
-    button {
-      background-color: transparent;
-      color: #fff;
-      border: 1px solid #fff;
-      padding: 10px 40px;
-      text-transform: capitalize;
-    }
-  }
 }
 
 /* End empathy blue */
@@ -480,14 +510,14 @@ header {
     display: flex;
     align-items: center;
 
-    @media #{$desktop} {
-      height: 7rem;
+    @media #{$tablet} {
+      padding: 15px;
     }
 
     @media #{$mobile} {
       width: 100%;
       margin-bottom: 12px;
-      padding: 0 20px;
+      padding: 15px 20px;
     }
 
     .icon {
@@ -523,9 +553,14 @@ header {
 .tailored-plan {
   padding: 100px 0 170px;
 
+  @media #{$tablet} {
+    padding: 100px 0;
+  }
+
   @media #{$mobile} {
     border-top: 1px solid #F5F5FA;
     padding-bottom: 60px;
+    padding-top: 0;
 
     .container {
       padding: 0 15px;
@@ -543,7 +578,6 @@ header {
       margin-bottom: rem(40px);
 
       @media #{$mobile} {
-        width: 70%;
         margin-bottom: rem(14px);
       }
 
@@ -556,7 +590,6 @@ header {
       color: $secondaryColor;
       margin-bottom: rem(8px);
       font-size: 1.3rem;
-      font-weight: 600;
     }
 
     p {
@@ -578,20 +611,24 @@ header {
       cursor: pointer;
 
       @media #{$mobile} {
-        width: 100%;
-        padding: 19px 25px 19px 30px;
+        padding: 12px 55px 12px 30px;
       }
     }
   }
 
   .right-content {
-    @media #{$mobile} {
+    @media #{$maxTab} {
       padding-top: rem(60px);
     }
 
     .diet-plan {
       .diet-plan-header {
         position: relative;
+
+        @media #{$mobile} {
+          padding: 0 30px;
+          margin-bottom: -40px;
+        }
 
         h3 {
           font-weight: 600;
@@ -691,7 +728,7 @@ header {
         z-index: 1;
 
         @media #{$mobile} {
-          min-height: 333px;
+          min-height: 540px;
         }
 
         .diet {
@@ -700,42 +737,45 @@ header {
           top: 24px;
           box-shadow: 0px 68px 121px rgba(0, 0, 0, 0.07);
           border-radius: 8px;
-          opacity: 0;
-          visibility: hidden;
           transition: all 0.5s ease-in-out;
 
           &.active {
-            opacity: 1;
-            visibility: visible;
+            transform: scale(1) translate(0) !important;
+            z-index: 10 !important;
+
+            @media #{$mobile} {
+              transform: scale(0.8) translate(0) !important;
+              z-index: 10 !important;
+            }
+
           }
 
-          @media #{$mobile} {
-            top: 9px;
+          &.one {
+            @media #{$mobile} {
+              transform: scale(0.8) translate(0);
+            }
           }
 
-          // &.one {
-          //   transform: scale(1) translate(0);
-          //   z-index: 3;
 
-          // }
 
-          // &.two {
-          //   transform: scale(0.9) translate(70px);
-          //   z-index: 2;
+          &.two {
+            transform: scale(0.9) translate(70px);
+            z-index: 2;
 
-          //   @media #{$mobile} {
-          //     transform: scale(0.9) translate(27px);
-          //   }
-          // }
+            @media #{$mobile} {
+              transform: scale(0.7) translate(45px)
+            }
 
-          // &.three {
-          //   transform: scale(0.8) translate(145px);
-          //   z-index: 1;
+          }
 
-          //   @media #{$mobile} {
-          //     transform: scale(0.8) translate(145px);
-          //   }
-          // }
+          &.three {
+            transform: scale(0.8) translate(145px);
+            z-index: 1;
+
+            @media #{$mobile} {
+              transform: scale(0.6) translate(100px)
+            }
+          }
 
         }
       }
@@ -748,8 +788,6 @@ header {
 /* Start Keep Tracking */
 .keep-tracking {
   background: url(../imgs/keep-tracking-bg.png)no-repeat center center/cover;
-  overflow: visible;
-  margin-top: 100px;
 
   @media #{$mobile} {
     background: url(../imgs/keep-tracking-bg-m.png)no-repeat center top/cover;
@@ -762,6 +800,10 @@ header {
     img {
       margin-top: 130px;
       margin-bottom: 26px;
+
+      @media #{$tablet} {
+        margin-top: 100px;
+      }
 
       @media #{$mobile} {
         margin-top: 60px;
@@ -778,6 +820,11 @@ header {
       margin-top: 22px;
       margin-bottom: 130px;
       width: 60%;
+
+      @media #{$tablet} {
+        width: 100%;
+        margin-bottom: 100px;
+      }
 
       @media #{$mobile} {
         font-size: 14px;
@@ -796,24 +843,19 @@ header {
       height: 475px;
     }
 
-    .spark {
-      top: -75px;
-      left: -15px;
-      position: absolute;
-
-      @media #{$mobile} {
-        top: -15px;
-        left: -30px;
-        transform: scale(0.6);
-      }
-    }
 
     .iphone {
       position: absolute;
       z-index: 1;
-      left: -817px;
-      top: -209px;
-      transform: scale(0.65);
+      left: -750px;
+      top: -160px;
+      transform: scale(0.6);
+
+      @media #{$tablet} {
+        top: -148px;
+        left: 30px;
+        transform: scale(0.7);
+      }
 
       @media #{$mobile} {
         top: -10px;
@@ -841,9 +883,12 @@ header {
 /* Start on The Medi */
 .on-the-media {
   padding: 45px 0;
+  position: relative;
+  z-index: 2;
 
   @media #{$mobile} {
     padding: 30px 0;
+    background-color: #f4f4f45c;
   }
 
   p {
@@ -855,6 +900,12 @@ header {
     letter-spacing: 3px;
     text-transform: uppercase;
     color: #9d9eae;
+
+    @media #{$tablet} {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+    }
   }
 
   .media-channel {
@@ -886,6 +937,10 @@ header {
   position: relative;
   padding: 100px 0;
 
+  @media #{$mobile} {
+    padding: 60px 0;
+  }
+
   &:after {
     content: "";
     position: absolute;
@@ -893,7 +948,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(25, 15, 60, 0.7);
   }
 
   .price-plan {
@@ -905,6 +960,16 @@ header {
     padding: 50px;
     border-radius: 10px;
     text-align: center;
+
+    @media #{$maxTab} {
+      width: 90%;
+      padding: 30px;
+    }
+
+    @media #{$betweentabdesk} {
+      width: 70%;
+      padding: 30px;
+    }
 
     h3 {
       font-size: 24px;
@@ -942,7 +1007,11 @@ header {
 
       li {
         color: #999;
-        text-align: left;
+        text-align: $textLeft;
+
+        @media #{$maxTab} {
+          text-align: center;
+        }
 
         i {
           color: $primaryColor;
@@ -965,6 +1034,14 @@ header {
     z-index: 3;
     color: #fff;
 
+    @media #{$mobile} {
+      margin-top: 50px;
+
+      .price-content-img {
+        text-align: center;
+      }
+    }
+
     h2 {
       color: #f4f4f4;
       font-weight: bold;
@@ -972,6 +1049,13 @@ header {
       margin-bottom: 20px;
       width: 70%;
       line-height: 1.5;
+
+      @media #{$maxTab} {
+        width: 100%;
+        line-height: 1.4;
+        font-weight: 500;
+        font-size: 25px;
+      }
     }
 
     .price-desc {
@@ -981,13 +1065,15 @@ header {
       &+p {
         margin-top: 30px;
 
+        @media #{$maxTab} {
+          margin-top: 15px;
+        }
+
         span {
           font-weight: bold;
         }
       }
-
     }
-
   }
 }
 
@@ -1033,11 +1119,17 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    @media #{$mobile} {
+
+
+    @media #{$maxTab} {
       position: relative;
-      top: 0;
+      top: 30px;
       transform: translateX(-50%) rotate(90deg);
       margin-bottom: 20px;
+    }
+
+    @media #{$mobile} {
+      top: 0;
     }
   }
 
@@ -1046,6 +1138,13 @@ header {
     perspective: 1000;
     width: 100%;
     height: 100%;
+
+    @media #{$tablet} {
+      height: 510px;
+      margin-top: 50px;
+      width: 500px;
+      margin: 50px auto 0;
+    }
 
     @media #{$mobile} {
       height: 500px;
@@ -1086,6 +1185,10 @@ header {
           height: 10px;
           border-radius: 5px;
           padding: 82px 0 71px 0;
+
+          @media #{$betweentabdesk} {
+            padding: 70px 0 65px 0
+          }
 
 
           span {
@@ -1197,8 +1300,13 @@ header {
           width: 60%;
           margin-bottom: 20px;
 
-          @media #{$mobile} {
-            width: 90%;
+          @media #{$betweentabdesk} {
+            width: 100%;
+            margin-bottom: 10px;
+          }
+
+          @media #{$maxTab} {
+            width: 85%;
           }
 
           span {
@@ -1213,12 +1321,21 @@ header {
         ul {
           margin-bottom: 28px;
 
+          @media #{$betweentabdesk} {
+            margin-bottom: 15px;
+          }
+
           li {
             font-size: 13px;
             line-height: 18px;
             color: #808191;
             position: relative;
             padding-left: 23px;
+
+            @media #{$betweentabdesk} {
+              line-height: 13px;
+            }
+
 
             &:before {
               content: "";
@@ -1241,14 +1358,30 @@ header {
           }
         }
 
-        #convertToForm {
-          @media #{$mobile} {
-            width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
+        .tips-btn {
+          @media #{$betweentabdesk} {
+            text-align: center;
+            margin-left: -50px;
+          }
+
+
+          #convertToForm {
+            @media #{$betweentabdesk} {
+              padding: 10px 30px;
+            }
+
+
+            @media #{$mobile} {
+              width: 100%;
+              padding-right: 15px;
+              padding-left: 15px;
+            }
+
           }
 
         }
+
+
       }
     }
 
@@ -1258,8 +1391,17 @@ header {
       transform: rotateY(180deg);
       padding: 30px;
 
+      @media #{$betweentabdesk} {
+        padding: 15px 20px;
+      }
+
       h2 {
         margin-bottom: 20px;
+
+        @media #{$betweentabdesk} {
+          margin-bottom: 10px;
+          font-size: 25px;
+        }
       }
 
       label {
@@ -1267,6 +1409,10 @@ header {
         font-size: 14px;
         line-height: 26px;
         color: #595A6E;
+
+        @media #{$betweentabdesk} {
+          line-height: 20px;
+        }
       }
 
       .form-control {
@@ -1277,6 +1423,10 @@ header {
         height: auto;
         outline: none;
         box-shadow: none;
+
+        @media #{$betweentabdesk} {
+          padding: 10px 30px;
+        }
 
         @media #{$mobile} {
           padding: 18px 28px;
@@ -1343,15 +1493,27 @@ header {
         line-height: rem(28px);
         color: #9D9EAE;
         width: 85%;
+
+        @media #{$mobile} {
+          width: 100%;
+        }
       }
     }
   }
 
-  .faq-button {
-    width: 100%;
-    background-color: #CACCE0;
-    padding-top: 16px;
-    padding-bottom: 16px;
+  .faq-btn {
+    text-align: center;
+
+    button {
+      width: 65%;
+      background-color: #CACCE0;
+      padding: 16px 40px 16px 20px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: darken(#CACCE0, 5);
+      }
+    }
   }
 }
 
@@ -1363,6 +1525,7 @@ header {
 
   @media #{$mobile} {
     text-align: center;
+    padding-bottom: 30px;
   }
 
   .container {
@@ -1370,10 +1533,17 @@ header {
   }
 
   .policy,
+  .links {
+    @media #{$tablet} {
+      margin-bottom: 50px;
+    }
+  }
+
+  .policy,
   .links,
   .contact {
     @media #{$mobile} {
-      margin-bottom: 68px;
+      margin-bottom: 40px;
     }
 
     li {
@@ -1460,15 +1630,15 @@ header {
     border: 1px solid #E4E5F0;
     box-shadow: 0px 8px 8px rgba(213, 215, 232, 0.25);
     border-radius: 5px;
-    width: rem(270px);
     height: rem(48px);
     line-height: rem(48px);
-    padding-left: rem(24px);
+    padding-left: rem(10px);
     margin-top: rem(10px);
     margin-bottom: rem(24px);
 
     @media #{$mobile} {
       margin: 7px auto 15px;
+      width: 80%;
     }
 
     input[type="email"] {
@@ -1531,9 +1701,9 @@ header {
     }
 
     @media #{$mobile} {
-      margin-top: rem(90px);
+      margin-top: 50px;
       padding-bottom: 0;
-      padding-top: rem(60px);
+      padding-top: rem(30px);
     }
 
 
@@ -1567,6 +1737,7 @@ header {
   cursor: pointer;
   transition: all 0.4s ease-in-out;
   background-color: #fff;
+  z-index: 9999;
   display: none;
 
   @media #{$desktop} {
@@ -1574,10 +1745,7 @@ header {
   }
 
   @media #{$mobile} {
-    bottom: 90px;
-    background-color: #fff;
-    right: 50%;
-    transform: translateX(50%);
+    bottom: rem(90px);
   }
 
   &:hover {

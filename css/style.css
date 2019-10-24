@@ -82,7 +82,7 @@ ul {
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 30px;
+    padding: 0 20px;
     position: relative;
   }
 }
@@ -167,13 +167,13 @@ header .navbar {
   }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 992px) {
   header .navbar {
-    position: absolute !important;
-    z-index: 9999;
-    width: 100%;
-    background-color: #fff;
+    padding-bottom: 20px;
   }
+}
+
+@media (max-width: 767px) {
   header .navbar.navbar-expand-lg > .container {
     padding: 0 20px;
   }
@@ -200,14 +200,22 @@ header .navbar .the-button {
   cursor: pointer;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   header .navbar .the-button {
     display: block;
     background: none;
     border: 0;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  header .navbar .the-button {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
 }
 
@@ -235,6 +243,15 @@ header .navbar .transformed .the-line:last-child {
   -webkit-transform: rotate(45deg) translate(-4px, -6px);
           transform: rotate(45deg) translate(-4px, -6px);
   width: 75%;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  header .navbar-nav {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+  }
 }
 
 header .navbar-nav .nav-item .nav-link {
@@ -326,16 +343,28 @@ header .navbar-light .navbar-nav .nav-link:hover {
   height: 100%;
 }
 
-@media (max-width: 1366px) {
-  .showcase {
-    padding-top: 0;
+@media (min-width: 768px) and (max-width: 992px) {
+  .showcase:after {
+    background-position-x: 30%;
+  }
+}
+
+@media (max-width: 767px) {
+  .showcase:after {
+    background: none;
   }
 }
 
 @media (max-width: 767px) {
   .showcase {
-    padding-top: 11rem;
-    height: auto;
+    padding-top: 14rem;
+    position: relative;
+    text-align: center;
+  }
+  .showcase .showcase-bg {
+    position: absolute;
+    top: -270px;
+    left: -190px;
   }
   .showcase .container {
     padding: 0 20px;
@@ -359,8 +388,9 @@ header .navbar-light .navbar-nav .nav-link:hover {
 @media (max-width: 767px) {
   .showcase .showcase-content .showcase-title {
     margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 31px;
+    line-height: 45px;
+    text-align: center;
   }
 }
 
@@ -374,8 +404,8 @@ header .navbar-light .navbar-nav .nav-link:hover {
 
 @media (max-width: 767px) {
   .showcase .showcase-content .showcase-desc {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 28px;
     width: 80%;
     margin: 0 auto 1.5rem;
   }
@@ -397,82 +427,108 @@ header .navbar-light .navbar-nav .nav-link:hover {
 
 /* End showcase */
 /* Start empathy pink */
-.empathy {
+.empathy,
+.empathy-blue {
   background-color: #ef5fa2;
   padding: 50px;
 }
 
-.empathy .row {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media (min-width: 768px) and (max-width: 992px) {
+  .empathy,
+  .empathy-blue {
+    padding: 40px;
+  }
 }
 
-.empathy .empathy-content {
-  color: #fff;
+@media (max-width: 767px) {
+  .empathy,
+  .empathy-blue {
+    padding: 20px;
+  }
 }
 
-.empathy .empathy-content h2 {
-  margin-bottom: 20px;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.empathy .empathy-content p {
-  line-height: 1.7;
-  color: #f2f2f2;
-}
-
-.empathy .empathy-btn {
-  text-align: right;
-}
-
-.empathy .empathy-btn button {
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 10px 40px;
-  text-transform: capitalize;
-}
-
-/* End empathy pink */
-/* Start empathy blue */
-.empathy-blue {
-  background-color: #2A338F;
-  padding: 50px;
-}
-
+.empathy .row,
 .empathy-blue .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+.empathy .empathy-content,
 .empathy-blue .empathy-content {
   color: #fff;
 }
 
+.empathy .empathy-content h2,
 .empathy-blue .empathy-content h2 {
   margin-bottom: 20px;
   font-size: 28px;
   font-weight: bold;
 }
 
+@media (min-width: 768px) and (max-width: 992px) {
+  .empathy .empathy-content h2,
+  .empathy-blue .empathy-content h2 {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 767px) {
+  .empathy .empathy-content h2,
+  .empathy-blue .empathy-content h2 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+.empathy .empathy-content p,
 .empathy-blue .empathy-content p {
   line-height: 1.7;
   color: #f2f2f2;
 }
 
+@media (max-width: 767px) {
+  .empathy .empathy-content p,
+  .empathy-blue .empathy-content p {
+    font-size: 15px;
+  }
+}
+
+.empathy .empathy-btn,
 .empathy-blue .empathy-btn {
   text-align: right;
 }
 
+@media (max-width: 767px) {
+  .empathy .empathy-btn,
+  .empathy-blue .empathy-btn {
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+.empathy .empathy-btn button,
 .empathy-blue .empathy-btn button {
   background-color: transparent;
   color: #fff;
   border: 1px solid #fff;
   padding: 10px 40px;
   text-transform: capitalize;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .empathy .empathy-btn button,
+  .empathy-blue .empathy-btn button {
+    padding: 10px 30px;
+  }
+}
+
+/* End empathy pink */
+/* Start empathy blue */
+.empathy-blue {
+  background-color: #2A338F;
 }
 
 /* End empathy blue */
@@ -508,9 +564,9 @@ header .navbar-light .navbar-nav .nav-link:hover {
           align-items: center;
 }
 
-@media (max-width: 1366px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .cards .card-item {
-    height: 7rem;
+    padding: 15px;
   }
 }
 
@@ -518,7 +574,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
   .cards .card-item {
     width: 100%;
     margin-bottom: 12px;
-    padding: 0 20px;
+    padding: 15px 20px;
   }
 }
 
@@ -557,10 +613,17 @@ header .navbar-light .navbar-nav .nav-link:hover {
   padding: 100px 0 170px;
 }
 
+@media (min-width: 768px) and (max-width: 992px) {
+  .tailored-plan {
+    padding: 100px 0;
+  }
+}
+
 @media (max-width: 767px) {
   .tailored-plan {
     border-top: 1px solid #F5F5FA;
     padding-bottom: 60px;
+    padding-top: 0;
   }
   .tailored-plan .container {
     padding: 0 15px;
@@ -580,7 +643,6 @@ header .navbar-light .navbar-nav .nav-link:hover {
 
 @media (max-width: 767px) {
   .tailored-plan .left-content h2 {
-    width: 70%;
     margin-bottom: 0.875rem;
   }
 }
@@ -593,7 +655,6 @@ header .navbar-light .navbar-nav .nav-link:hover {
   color: #2A338F;
   margin-bottom: 0.5rem;
   font-size: 1.3rem;
-  font-weight: 600;
 }
 
 .tailored-plan .left-content p {
@@ -619,12 +680,11 @@ header .navbar-light .navbar-nav .nav-link:hover {
 
 @media (max-width: 767px) {
   .tailored-plan .left-content a {
-    width: 100%;
-    padding: 19px 25px 19px 30px;
+    padding: 12px 55px 12px 30px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .tailored-plan .right-content {
     padding-top: 3.75rem;
   }
@@ -632,6 +692,13 @@ header .navbar-light .navbar-nav .nav-link:hover {
 
 .tailored-plan .right-content .diet-plan .diet-plan-header {
   position: relative;
+}
+
+@media (max-width: 767px) {
+  .tailored-plan .right-content .diet-plan .diet-plan-header {
+    padding: 0 30px;
+    margin-bottom: -40px;
+  }
 }
 
 .tailored-plan .right-content .diet-plan .diet-plan-header h3 {
@@ -742,7 +809,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
 
 @media (max-width: 767px) {
   .tailored-plan .right-content .diet-plan .diet-slider {
-    min-height: 333px;
+    min-height: 540px;
   }
 }
 
@@ -753,20 +820,54 @@ header .navbar-light .navbar-nav .nav-link:hover {
   -webkit-box-shadow: 0px 68px 121px rgba(0, 0, 0, 0.07);
           box-shadow: 0px 68px 121px rgba(0, 0, 0, 0.07);
   border-radius: 8px;
-  opacity: 0;
-  visibility: hidden;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
 .tailored-plan .right-content .diet-plan .diet-slider .diet.active {
-  opacity: 1;
-  visibility: visible;
+  -webkit-transform: scale(1) translate(0) !important;
+          transform: scale(1) translate(0) !important;
+  z-index: 10 !important;
 }
 
 @media (max-width: 767px) {
-  .tailored-plan .right-content .diet-plan .diet-slider .diet {
-    top: 9px;
+  .tailored-plan .right-content .diet-plan .diet-slider .diet.active {
+    -webkit-transform: scale(0.8) translate(0) !important;
+            transform: scale(0.8) translate(0) !important;
+    z-index: 10 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .tailored-plan .right-content .diet-plan .diet-slider .diet.one {
+    -webkit-transform: scale(0.8) translate(0);
+            transform: scale(0.8) translate(0);
+  }
+}
+
+.tailored-plan .right-content .diet-plan .diet-slider .diet.two {
+  -webkit-transform: scale(0.9) translate(70px);
+          transform: scale(0.9) translate(70px);
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .tailored-plan .right-content .diet-plan .diet-slider .diet.two {
+    -webkit-transform: scale(0.7) translate(45px);
+            transform: scale(0.7) translate(45px);
+  }
+}
+
+.tailored-plan .right-content .diet-plan .diet-slider .diet.three {
+  -webkit-transform: scale(0.8) translate(145px);
+          transform: scale(0.8) translate(145px);
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .tailored-plan .right-content .diet-plan .diet-slider .diet.three {
+    -webkit-transform: scale(0.6) translate(100px);
+            transform: scale(0.6) translate(100px);
   }
 }
 
@@ -774,8 +875,6 @@ header .navbar-light .navbar-nav .nav-link:hover {
 /* Start Keep Tracking */
 .keep-tracking {
   background: url(../imgs/keep-tracking-bg.png) no-repeat center center/cover;
-  overflow: visible;
-  margin-top: 100px;
 }
 
 @media (max-width: 767px) {
@@ -792,6 +891,12 @@ header .navbar-light .navbar-nav .nav-link:hover {
 .keep-tracking .keep-tracking-content img {
   margin-top: 130px;
   margin-bottom: 26px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .keep-tracking .keep-tracking-content img {
+    margin-top: 100px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -811,6 +916,13 @@ header .navbar-light .navbar-nav .nav-link:hover {
   margin-top: 22px;
   margin-bottom: 130px;
   width: 60%;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .keep-tracking .keep-tracking-content p {
+    width: 100%;
+    margin-bottom: 100px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -833,28 +945,22 @@ header .navbar-light .navbar-nav .nav-link:hover {
   }
 }
 
-.keep-tracking .keep-tracking-img .spark {
-  top: -75px;
-  left: -15px;
-  position: absolute;
-}
-
-@media (max-width: 767px) {
-  .keep-tracking .keep-tracking-img .spark {
-    top: -15px;
-    left: -30px;
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-  }
-}
-
 .keep-tracking .keep-tracking-img .iphone {
   position: absolute;
   z-index: 1;
-  left: -817px;
-  top: -209px;
-  -webkit-transform: scale(0.65);
-          transform: scale(0.65);
+  left: -750px;
+  top: -160px;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .keep-tracking .keep-tracking-img .iphone {
+    top: -148px;
+    left: 30px;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
 }
 
 @media (max-width: 767px) {
@@ -881,11 +987,14 @@ header .navbar-light .navbar-nav .nav-link:hover {
 /* Start on The Medi */
 .on-the-media {
   padding: 45px 0;
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 767px) {
   .on-the-media {
     padding: 30px 0;
+    background-color: #f4f4f45c;
   }
 }
 
@@ -898,6 +1007,14 @@ header .navbar-light .navbar-nav .nav-link:hover {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #9d9eae;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .on-the-media p {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
 }
 
 .on-the-media .media-channel {
@@ -932,6 +1049,12 @@ header .navbar-light .navbar-nav .nav-link:hover {
   padding: 100px 0;
 }
 
+@media (max-width: 767px) {
+  .prices {
+    padding: 60px 0;
+  }
+}
+
 .prices:after {
   content: "";
   position: absolute;
@@ -939,7 +1062,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(25, 15, 60, 0.7);
 }
 
 .prices .price-plan {
@@ -951,6 +1074,20 @@ header .navbar-light .navbar-nav .nav-link:hover {
   padding: 50px;
   border-radius: 10px;
   text-align: center;
+}
+
+@media (max-width: 992px) {
+  .prices .price-plan {
+    width: 90%;
+    padding: 30px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .prices .price-plan {
+    width: 70%;
+    padding: 30px;
+  }
 }
 
 .prices .price-plan h3 {
@@ -993,6 +1130,12 @@ header .navbar-light .navbar-nav .nav-link:hover {
   text-align: left;
 }
 
+@media (max-width: 992px) {
+  .prices .price-plan .features li {
+    text-align: center;
+  }
+}
+
 .prices .price-plan .features li i {
   color: #ef5fa2;
   margin-right: 10px;
@@ -1011,6 +1154,15 @@ header .navbar-light .navbar-nav .nav-link:hover {
   color: #fff;
 }
 
+@media (max-width: 767px) {
+  .prices .price-content {
+    margin-top: 50px;
+  }
+  .prices .price-content .price-content-img {
+    text-align: center;
+  }
+}
+
 .prices .price-content h2 {
   color: #f4f4f4;
   font-weight: bold;
@@ -1020,6 +1172,15 @@ header .navbar-light .navbar-nav .nav-link:hover {
   line-height: 1.5;
 }
 
+@media (max-width: 992px) {
+  .prices .price-content h2 {
+    width: 100%;
+    line-height: 1.4;
+    font-weight: 500;
+    font-size: 25px;
+  }
+}
+
 .prices .price-content .price-desc {
   border: 1px solid #ccc;
   padding: 10px;
@@ -1027,6 +1188,12 @@ header .navbar-light .navbar-nav .nav-link:hover {
 
 .prices .price-content .price-desc + p {
   margin-top: 30px;
+}
+
+@media (max-width: 992px) {
+  .prices .price-content .price-desc + p {
+    margin-top: 15px;
+  }
 }
 
 .prices .price-content .price-desc + p span {
@@ -1080,13 +1247,19 @@ header .navbar-light .navbar-nav .nav-link:hover {
           transform: translate(-50%, -50%);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .body-weight .triangle {
     position: relative;
-    top: 0;
+    top: 30px;
     -webkit-transform: translateX(-50%) rotate(90deg);
             transform: translateX(-50%) rotate(90deg);
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .body-weight .triangle {
+    top: 0;
   }
 }
 
@@ -1096,6 +1269,15 @@ header .navbar-light .navbar-nav .nav-link:hover {
           perspective: 1000;
   width: 100%;
   height: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .body-weight .instadiet-analysis {
+    height: 510px;
+    margin-top: 50px;
+    width: 500px;
+    margin: 50px auto 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1142,6 +1324,12 @@ header .navbar-light .navbar-nav .nav-link:hover {
   height: 10px;
   border-radius: 5px;
   padding: 82px 0 71px 0;
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .body-weight .instadiet-analysis .front .bmi .bmi-bar {
+    padding: 70px 0 65px 0;
+  }
 }
 
 .body-weight .instadiet-analysis .front .bmi .bmi-bar span {
@@ -1257,9 +1445,16 @@ header .navbar-light .navbar-nav .nav-link:hover {
   margin-bottom: 20px;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 1000px) and (max-width: 1200px) {
   .body-weight .instadiet-analysis .front .tips p {
-    width: 90%;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .body-weight .instadiet-analysis .front .tips p {
+    width: 85%;
   }
 }
 
@@ -1274,12 +1469,24 @@ header .navbar-light .navbar-nav .nav-link:hover {
   margin-bottom: 28px;
 }
 
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .body-weight .instadiet-analysis .front .tips ul {
+    margin-bottom: 15px;
+  }
+}
+
 .body-weight .instadiet-analysis .front .tips ul li {
   font-size: 13px;
   line-height: 18px;
   color: #808191;
   position: relative;
   padding-left: 23px;
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .body-weight .instadiet-analysis .front .tips ul li {
+    line-height: 13px;
+  }
 }
 
 .body-weight .instadiet-analysis .front .tips ul li:before {
@@ -1301,8 +1508,21 @@ header .navbar-light .navbar-nav .nav-link:hover {
   margin-right: 6px;
 }
 
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .body-weight .instadiet-analysis .front .tips .tips-btn {
+    text-align: center;
+    margin-left: -50px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .body-weight .instadiet-analysis .front .tips .tips-btn #convertToForm {
+    padding: 10px 30px;
+  }
+}
+
 @media (max-width: 767px) {
-  .body-weight .instadiet-analysis .front .tips #convertToForm {
+  .body-weight .instadiet-analysis .front .tips .tips-btn #convertToForm {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -1317,8 +1537,21 @@ header .navbar-light .navbar-nav .nav-link:hover {
   padding: 30px;
 }
 
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .body-weight .instadiet-analysis .back {
+    padding: 15px 20px;
+  }
+}
+
 .body-weight .instadiet-analysis .back h2 {
   margin-bottom: 20px;
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .body-weight .instadiet-analysis .back h2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
 }
 
 .body-weight .instadiet-analysis .back label {
@@ -1326,6 +1559,12 @@ header .navbar-light .navbar-nav .nav-link:hover {
   font-size: 14px;
   line-height: 26px;
   color: #595A6E;
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .body-weight .instadiet-analysis .back label {
+    line-height: 20px;
+  }
 }
 
 .body-weight .instadiet-analysis .back .form-control {
@@ -1338,6 +1577,12 @@ header .navbar-light .navbar-nav .nav-link:hover {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .body-weight .instadiet-analysis .back .form-control {
+    padding: 10px 30px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1413,11 +1658,27 @@ header .navbar-light .navbar-nav .nav-link:hover {
   width: 85%;
 }
 
-#faq .faq-button {
-  width: 100%;
+@media (max-width: 767px) {
+  #faq .faq-left-side li p,
+  #faq .faq-right-side li p {
+    width: 100%;
+  }
+}
+
+#faq .faq-btn {
+  text-align: center;
+}
+
+#faq .faq-btn button {
+  width: 65%;
   background-color: #CACCE0;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding: 16px 40px 16px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#faq .faq-btn button:hover {
+  background-color: #babdd7;
 }
 
 /* End FAQ */
@@ -1429,6 +1690,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
 @media (max-width: 767px) {
   #main-footer {
     text-align: center;
+    padding-bottom: 30px;
   }
 }
 
@@ -1436,11 +1698,18 @@ header .navbar-light .navbar-nav .nav-link:hover {
   position: relative;
 }
 
+@media (min-width: 768px) and (max-width: 992px) {
+  #main-footer .policy,
+  #main-footer .links {
+    margin-bottom: 50px;
+  }
+}
+
 @media (max-width: 767px) {
   #main-footer .policy,
   #main-footer .links,
   #main-footer .contact {
-    margin-bottom: 68px;
+    margin-bottom: 40px;
   }
 }
 
@@ -1532,10 +1801,9 @@ header .navbar-light .navbar-nav .nav-link:hover {
   -webkit-box-shadow: 0px 8px 8px rgba(213, 215, 232, 0.25);
           box-shadow: 0px 8px 8px rgba(213, 215, 232, 0.25);
   border-radius: 5px;
-  width: 16.875rem;
   height: 3rem;
   line-height: 3rem;
-  padding-left: 1.5rem;
+  padding-left: 0.625rem;
   margin-top: 0.625rem;
   margin-bottom: 1.5rem;
 }
@@ -1543,6 +1811,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
 @media (max-width: 767px) {
   #main-footer form {
     margin: 7px auto 15px;
+    width: 80%;
   }
 }
 
@@ -1605,9 +1874,9 @@ header .navbar-light .navbar-nav .nav-link:hover {
 
 @media (max-width: 767px) {
   #main-footer .copyright {
-    margin-top: 5.625rem;
+    margin-top: 50px;
     padding-bottom: 0;
-    padding-top: 3.75rem;
+    padding-top: 1.875rem;
   }
 }
 
@@ -1639,6 +1908,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   background-color: #fff;
+  z-index: 9999;
   display: none;
 }
 
@@ -1650,11 +1920,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
 
 @media (max-width: 767px) {
   .scroll-top {
-    bottom: 90px;
-    background-color: #fff;
-    right: 50%;
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
+    bottom: 5.625rem;
   }
 }
 
