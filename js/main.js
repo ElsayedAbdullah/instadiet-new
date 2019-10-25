@@ -69,24 +69,30 @@ $(function () {
   $('.arrows .slider-next').on('click', function () {
 
     var nextImg = $('.diet.active').next('.diet');
-    if (nextImg.length == 0) {
-      nextImg = $('.diet-slider .diet:first');
+    // if (nextImg.length == 0) {
+    //   nextImg = $('.diet-slider .diet:first');
+    // }
+    if (nextImg.length) {
+      $('.diet.active').removeClass('active');
+      nextImg.addClass('active');
     }
-    $('.diet.active').removeClass('active');
-    nextImg.addClass('active');
     checkActiveClass();
+
   });
 
 
   $('.arrows .slider-prev').on('click', function () {
 
     var prevImg = $('.diet.active').prev('.diet');
-    if (prevImg.length == 0) {
-      prevImg = $('.diet-slider .diet:last');
+    // if (prevImg.length == 0) {
+    //   prevImg = $('.diet-slider .diet:last');
+    // }
+    if (prevImg.length) {
+      $('.diet.active').removeClass('active');
+      prevImg.addClass('active');
     }
-    $('.diet.active').removeClass('active');
-    prevImg.addClass('active');
     checkActiveClass();
+
   });
 
   // check the active class on diet and change the title

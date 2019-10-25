@@ -161,6 +161,10 @@ header .navbar {
   padding: 0.9375rem 0;
 }
 
+header .navbar .navbar-brand {
+  margin-right: 0;
+}
+
 @media (max-width: 1366px) {
   header .navbar {
     padding: 0.9375rem 0;
@@ -181,7 +185,6 @@ header .navbar {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    margin-right: 0;
   }
   header .navbar .navbar-collapse {
     -webkit-box-ordinal-group: 5;
@@ -734,8 +737,8 @@ header .navbar-light .navbar-nav .nav-link:hover {
 @media (max-width: 767px) {
   .tailored-plan .right-content .diet-plan .diet-plan-header .arrows {
     right: 35px;
-    -webkit-transform: scale(0.75);
-            transform: scale(0.75);
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
 }
 
@@ -749,6 +752,9 @@ header .navbar-light .navbar-nav .nav-link:hover {
 @media (max-width: 767px) {
   .tailored-plan .right-content .diet-plan .diet-plan-header .arrows button {
     margin: 0 5px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
   }
 }
 
