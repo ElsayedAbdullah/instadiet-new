@@ -15,7 +15,7 @@ $(function () {
     $("html, body").animate({
         scrollTop: 0
       },
-      600
+      800
     );
   });
 
@@ -52,7 +52,7 @@ $(function () {
 
 
   // switch between the meals
-  var zIndexVAlue = 0;
+  // var zIndexVAlue = 0;
   // $('.diet-slider .diet').on('click', function () {
   //   $(this).animate({
   //     left: '30%',
