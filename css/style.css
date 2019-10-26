@@ -186,6 +186,10 @@ header .navbar .navbar-brand {
 @media (max-width: 767px) {
   header .navbar.navbar-expand-lg > .container {
     padding: 0 20px;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   header .navbar .navbar-brand {
     -webkit-box-ordinal-group: 2;
@@ -223,9 +227,9 @@ header .navbar .the-button {
 
 @media (max-width: 767px) {
   header .navbar .the-button {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    position: absolute;
+    top: 5px;
+    right: 20px;
   }
 }
 

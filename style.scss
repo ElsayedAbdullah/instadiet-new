@@ -187,6 +187,8 @@ header {
 
       &.navbar-expand-lg>.container {
         padding: 0 20px;
+        text-align: center;
+        justify-content: center;
       }
 
       .navbar-brand {
@@ -216,7 +218,9 @@ header {
       }
 
       @media #{$mobile} {
-        order: 3;
+        position: absolute;
+        top: 5px;
+        right: 20px;
       }
 
       .the-line {
