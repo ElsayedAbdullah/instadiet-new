@@ -20,6 +20,13 @@ $(function () {
   });
 
 
+  $(window).scroll(function () {
+    if ($(window).scrollTop() >= 100) {
+      $('.call-to-action').css("display", "flex");
+    } else {
+      $('.call-to-action').css("display", "none");
+    }
+  });
 
   $("#convertToForm").click(function () {
     $(".instadiet-analysis .front").css({

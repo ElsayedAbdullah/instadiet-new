@@ -157,6 +157,12 @@ header {
           box-shadow: 0px 8px 18px rgba(206, 208, 224, 0.25);
 }
 
+@media (max-width: 767px) {
+  header {
+    position: absolute;
+  }
+}
+
 header .navbar {
   padding: 0.9375rem 0;
 }
@@ -320,6 +326,50 @@ header .navbar-light .navbar-nav .nav-link:hover {
 }
 
 /* End Header */
+.call-to-action {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  height: 70px;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  -webkit-box-shadow: 0px 8px 18px rgba(206, 208, 224, 0.25);
+          box-shadow: 0px 8px 18px rgba(206, 208, 224, 0.25);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.call-to-action .start-diet {
+  background-color: #ef5fa2;
+  border-radius: 3px;
+  padding: 0.625rem 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+@media (max-width: 767px) {
+  .call-to-action .start-diet {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+.call-to-action .start-diet:hover {
+  background-color: #ed4895;
+}
+
 /* Start showcase */
 .showcase {
   overflow: hidden;
@@ -1719,20 +1769,10 @@ header .navbar-light .navbar-nav .nav-link:hover {
   }
 }
 
-#faq .faq-btn {
-  text-align: center;
-}
-
-#faq .faq-btn button {
-  width: 72%;
-  background-color: #CACCE0;
-  padding: 16px 40px 16px 20px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-#faq .faq-btn button:hover {
-  background-color: #babdd7;
+@media (max-width: 767px) {
+  #faq .faq-right-side li:last-child {
+    margin-bottom: 0;
+  }
 }
 
 /* End FAQ */
@@ -1852,9 +1892,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
   -webkit-box-shadow: 0px 8px 8px rgba(213, 215, 232, 0.25);
           box-shadow: 0px 8px 8px rgba(213, 215, 232, 0.25);
   border-radius: 5px;
-  height: 3rem;
-  line-height: 3rem;
-  padding-left: 0.625rem;
+  padding: 10px;
   margin-top: 0.625rem;
   margin-bottom: 1.5rem;
 }
@@ -1893,6 +1931,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
   color: #ef5fa2;
   width: 38%;
   float: right;
+  line-height: 28px;
 }
 
 #main-footer .social-icons li:not(:last-child) {

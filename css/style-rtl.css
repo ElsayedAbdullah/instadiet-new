@@ -291,20 +291,6 @@ body {
   right: 0;
 }
 
-@media (max-width: 767px) {
-  #faq .faq-btn button {
-    width: 63%;
-    padding: 16px 20px 16px 40px;
-  }
-  #faq .faq-btn button:hover i {
-    left: 25px;
-  }
-  #faq .faq-btn button i {
-    left: 30px;
-    right: auto;
-  }
-}
-
 /* End FAQ */
 /* Start Footer */
 @media (max-width: 767px) {

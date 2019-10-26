@@ -35,6 +35,7 @@ html.overlay {
   overflow: hidden;
 }
 
+
 body.overlay:after {
   content: "";
   position: fixed;
@@ -161,6 +162,10 @@ header {
   width: 100%;
   z-index: 9999;
   box-shadow: 0px 8px 18px rgba(206, 208, 224, 0.25);
+
+  @media #{$mobile} {
+    position: absolute;
+  }
 
   .navbar {
     padding: rem(15px 0);
@@ -306,7 +311,41 @@ header {
   }
 }
 
+
 /* End Header */
+
+.call-to-action {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  height: 70px;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  box-shadow: 0px 8px 18px rgba(206, 208, 224, 0.25);
+  transition: all 0.4s ease-in-out;
+
+  .start-diet {
+    background-color: $primaryColor;
+    border-radius: 3px;
+    padding: rem(10px 24px);
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.4s ease-in-out;
+
+    @media #{$mobile} {
+      order: 3;
+    }
+
+    &:hover {
+      background-color: darken($primaryColor, 5);
+    }
+  }
+}
 
 /* Start showcase */
 .showcase {
@@ -1509,6 +1548,7 @@ header {
 
       @media #{$mobile} {
         margin-bottom: rem(40px);
+
       }
 
       h3 {
@@ -1546,18 +1586,14 @@ header {
     }
   }
 
-  .faq-btn {
-    text-align: center;
-
-    button {
-      width: 72%;
-      background-color: #CACCE0;
-      padding: 16px 40px 16px 20px;
-      transition: all 0.3s ease-in-out;
-
-      &:hover {
-        background-color: darken(#CACCE0, 5);
+  .faq-right-side {
+    li {
+      @media #{$mobile} {
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
+
     }
   }
 }
@@ -1672,9 +1708,7 @@ header {
     border: 1px solid #E4E5F0;
     box-shadow: 0px 8px 8px rgba(213, 215, 232, 0.25);
     border-radius: 5px;
-    height: rem(48px);
-    line-height: rem(48px);
-    padding-left: rem(10px);
+    padding: 10px;
     margin-top: rem(10px);
     margin-bottom: rem(24px);
 
@@ -1711,6 +1745,7 @@ header {
       color: $primaryColor;
       width: 38%;
       float: $floatRight;
+      line-height: 28px;
     }
   }
 
