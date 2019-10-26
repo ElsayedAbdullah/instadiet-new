@@ -22,7 +22,7 @@ $(function () {
 
   $(window).scroll(function () {
     if ($(window).scrollTop() >= 100) {
-      $('.call-to-action').css("display", "flex");
+      $('.call-to-action').css("display", "block");
     } else {
       $('.call-to-action').css("display", "none");
     }

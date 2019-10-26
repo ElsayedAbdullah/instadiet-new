@@ -332,12 +332,8 @@ header .navbar-light .navbar-nav .nav-link:hover {
 /* End Header */
 .call-to-action {
   display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  text-align: center;
+  line-height: 70px;
   position: fixed;
   width: 100%;
   background-color: #fff;
