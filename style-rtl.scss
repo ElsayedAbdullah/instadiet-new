@@ -395,6 +395,10 @@ body {
 /* Start Footer */
 #main-footer {
 
+  @media #{$mobile} {
+    text-align: $textLeft;
+  }
+
   .contact {
     li {
 
@@ -442,8 +446,13 @@ body {
     padding-left: 0;
     padding-right: rem(24px);
 
+
     @media #{$betweentabdesk} {
       padding-right: rem(10px);
+    }
+
+    button[type="submit"] {
+      float: $floatRight;
     }
   }
 

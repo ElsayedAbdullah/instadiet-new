@@ -977,6 +977,7 @@ header {
     text-align: center;
 
     @media #{$maxTab} {
+      margin-top: 50px;
       width: 90%;
       padding: 30px;
     }
@@ -1054,8 +1055,6 @@ header {
     color: #fff;
 
     @media #{$mobile} {
-      margin-top: 50px;
-
       .price-content-img {
         text-align: center;
 
@@ -1570,7 +1569,7 @@ header {
   position: relative;
 
   @media #{$mobile} {
-    text-align: center;
+    text-align: $textLeft;
     padding-bottom: 30px;
   }
 
@@ -1635,11 +1634,6 @@ header {
       &.location {
         overflow: hidden;
 
-        @media #{$mobile} {
-          width: 75%;
-          margin: auto;
-        }
-
         img {
           float: $floatLeft;
           margin-right: 15px;
@@ -1664,6 +1658,8 @@ header {
   }
 
   .newsletter {
+    text-align: center;
+
     p {
       font-size: rem(14px);
       line-height: rem(35px);
@@ -1714,6 +1710,7 @@ header {
       text-transform: uppercase;
       color: $primaryColor;
       width: 38%;
+      float: $floatRight;
     }
   }
 
@@ -1750,6 +1747,7 @@ header {
       margin-top: 50px;
       padding-bottom: 0;
       padding-top: rem(40px);
+      text-align: center;
     }
 
 

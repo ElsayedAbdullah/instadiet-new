@@ -1094,6 +1094,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
 
 @media (max-width: 992px) {
   .prices .price-plan {
+    margin-top: 50px;
     width: 90%;
     padding: 30px;
   }
@@ -1177,9 +1178,6 @@ header .navbar-light .navbar-nav .nav-link:hover {
 }
 
 @media (max-width: 767px) {
-  .prices .price-content {
-    margin-top: 50px;
-  }
   .prices .price-content .price-content-img {
     text-align: center;
   }
@@ -1745,7 +1743,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
 
 @media (max-width: 767px) {
   #main-footer {
-    text-align: center;
+    text-align: left;
     padding-bottom: 30px;
   }
 }
@@ -1816,13 +1814,6 @@ header .navbar-light .navbar-nav .nav-link:hover {
   overflow: hidden;
 }
 
-@media (max-width: 767px) {
-  #main-footer .contact li.location {
-    width: 75%;
-    margin: auto;
-  }
-}
-
 #main-footer .contact li.location img {
   float: left;
   margin-right: 15px;
@@ -1843,6 +1834,10 @@ header .navbar-light .navbar-nav .nav-link:hover {
     position: relative;
     top: 7px;
   }
+}
+
+#main-footer .newsletter {
+  text-align: center;
 }
 
 #main-footer .newsletter p {
@@ -1897,6 +1892,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
   text-transform: uppercase;
   color: #ef5fa2;
   width: 38%;
+  float: right;
 }
 
 #main-footer .social-icons li:not(:last-child) {
@@ -1933,6 +1929,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
     margin-top: 50px;
     padding-bottom: 0;
     padding-top: 2.5rem;
+    text-align: center;
   }
 }
 

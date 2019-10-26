@@ -307,6 +307,12 @@ body {
 
 /* End FAQ */
 /* Start Footer */
+@media (max-width: 767px) {
+  #main-footer {
+    text-align: right;
+  }
+}
+
 #main-footer .contact li:nth-child(1) img {
   margin-right: 0;
   margin-left: 10px;
@@ -352,6 +358,10 @@ body {
   #main-footer form {
     padding-right: 0.625rem;
   }
+}
+
+#main-footer form button[type="submit"] {
+  float: left;
 }
 
 #main-footer .social-icons li:not(:last-child) {
