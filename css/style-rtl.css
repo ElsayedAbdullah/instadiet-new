@@ -3,6 +3,12 @@ body {
   font-family: "DinNext";
 }
 
+@media (min-width: 650px) and (max-width: 750px) {
+  header .navbar .navbar-nav {
+    text-align: right;
+  }
+}
+
 @media (max-width: 767px) {
   .call-to-action .start-diet {
     float: none !important;
@@ -52,6 +58,12 @@ body {
 
 @media (max-width: 767px) {
   .showcase .showcase-content .showcase-list li {
+    text-align: right;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 750px) {
+  .showcase .showcase-content .showcase-btn {
     text-align: right;
   }
 }
@@ -354,7 +366,7 @@ body {
   padding-right: 1.5rem;
 }
 
-@media (min-width: 993px) and (max-width: 1200px) {
+@media (min-width: 1000px) and (max-width: 1200px) {
   #main-footer form {
     padding-right: 0.625rem;
   }

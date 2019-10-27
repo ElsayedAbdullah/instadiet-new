@@ -8,7 +8,9 @@ $desktop: "(max-width: 1366px)";
 $mobile:"(max-width: 767px)";
 $tablet: "(min-width: 768px) and (max-width: 992px)";
 $maxTab: "(max-width: 992px)";
-$betweentabdesk: "(min-width: 993px) and (max-width: 1200px)";
+$betweentabdesk: "(min-width: 1000px) and (max-width: 1200px)";
+$mobileWidth: "(min-width: 640px) and (max-width: 840px)";
+$iphone6_7: "(min-width: 650px) and (max-width: 750px)";
 
 @import "rem-sass";
 
@@ -17,8 +19,18 @@ body {
   font-family: "DinNext";
 }
 
-.call-to-action {
+// header
+header {
+  .navbar {
+    .navbar-nav {
+      @media #{$iphone6_7} {
+        text-align: $textLeft;
+      }
+    }
+  }
+}
 
+.call-to-action {
   @media #{$mobile} {
     .start-diet {
       float: none !important;
@@ -71,6 +83,11 @@ body {
 
     }
 
+    .showcase-btn {
+      @media #{$iphone6_7} {
+        text-align: $textLeft;
+      }
+    }
   }
 }
 

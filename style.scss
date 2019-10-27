@@ -10,6 +10,7 @@ $tablet: "(min-width: 768px) and (max-width: 992px)";
 $maxTab: "(max-width: 992px)";
 $betweentabdesk: "(min-width: 1000px) and (max-width: 1200px)";
 $mobileWidth: "(min-width: 640px) and (max-width: 840px)";
+$iphone6_7: "(min-width: 650px) and (max-width: 750px)";
 
 @import "rem-sass";
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap');
@@ -222,6 +223,13 @@ header {
         order: 0
       }
 
+      @media #{$tablet} {
+        display: block;
+        background: none;
+        border: 0;
+        order: 0
+      }
+
       .the-line {
         display: block;
         height: 2px;
@@ -251,12 +259,12 @@ header {
   }
 
   .navbar-nav {
-    // @media #{$tablet} {
-    //   margin-bottom: 20px;
-    //   margin-top: 10px;
-    //   padding-top: 10px;
-    //   border-top: 1px solid #eee;
-    // }
+    @media #{$tablet} {
+      margin-bottom: 20px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #eee;
+    }
 
     .nav-item {
       .nav-link {
@@ -283,6 +291,11 @@ header {
             margin: 15px -20px 0;
             padding-left: 25px !important;
             padding-top: 25px;
+
+          }
+
+          @media #{$tablet} {
+            padding: 12px;
 
           }
         }
@@ -489,6 +502,12 @@ header {
           color: $primaryColor;
           margin-right: 6px;
         }
+      }
+    }
+
+    .showcase-btn {
+      @media #{$iphone6_7} {
+        text-align: $textLeft;
       }
     }
   }
