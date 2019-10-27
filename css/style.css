@@ -150,7 +150,7 @@ button:focus {
 /* Start Header */
 header {
   background-color: #fff;
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 9999;
   -webkit-box-shadow: 0px 8px 18px rgba(206, 208, 224, 0.25);
@@ -178,8 +178,8 @@ header .navbar .navbar-brand {
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-  header .navbar {
-    padding-bottom: 20px;
+  header .navbar.navbar-expand-lg > .container {
+    padding: 0 20px;
   }
 }
 
@@ -214,22 +214,17 @@ header .navbar .the-button {
   cursor: pointer;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 767px) {
   header .navbar .the-button {
+    position: absolute;
+    top: 5px;
+    right: 20px;
     display: block;
     background: none;
     border: 0;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
-  }
-}
-
-@media (max-width: 767px) {
-  header .navbar .the-button {
-    position: absolute;
-    top: 5px;
-    right: 20px;
   }
 }
 
@@ -257,15 +252,6 @@ header .navbar .transformed .the-line:last-child {
   -webkit-transform: rotate(45deg) translate(-4px, -6px);
           transform: rotate(45deg) translate(-4px, -6px);
   width: 75%;
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  header .navbar-nav {
-    margin-bottom: 20px;
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px solid #eee;
-  }
 }
 
 header .navbar-nav .nav-item .nav-link {
@@ -332,12 +318,11 @@ header .navbar-light .navbar-nav .nav-link:hover {
 /* End Header */
 .call-to-action {
   display: none;
-  text-align: center;
-  line-height: 70px;
   position: fixed;
   width: 100%;
   background-color: #fff;
-  height: 70px;
+  height: 74px;
+  padding-top: 15px;
   top: 0;
   left: 0;
   z-index: 9999;
@@ -345,6 +330,30 @@ header .navbar-light .navbar-nav .nav-link:hover {
           box-shadow: 0px 8px 18px rgba(206, 208, 224, 0.25);
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+}
+
+.call-to-action .container {
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .call-to-action {
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+    padding-top: 0;
+  }
+  .call-to-action .start-diet {
+    float: none !important;
+  }
+  .call-to-action .navbar-brand {
+    display: none;
+  }
+}
+
+.call-to-action .navbar-brand {
+  float: left;
+  margin: 0;
 }
 
 .call-to-action .start-diet {
@@ -356,6 +365,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
   font-size: 14px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+  float: right;
 }
 
 @media (max-width: 767px) {
@@ -385,6 +395,18 @@ header .navbar-light .navbar-nav .nav-link:hover {
   -ms-flex-line-pack: center;
       align-content: center;
   padding-top: 80px;
+}
+
+@media (min-width: 640px) and (max-width: 840px) {
+  .showcase {
+    height: 640px;
+  }
+}
+
+@media (width: 768px) {
+  .showcase {
+    height: 100vh;
+  }
 }
 
 .showcase:after {
@@ -429,6 +451,18 @@ header .navbar-light .navbar-nav .nav-link:hover {
   height: 50vh;
   position: relative;
   z-index: 3;
+}
+
+@media (min-width: 640px) and (max-width: 840px) {
+  .showcase .showcase-content {
+    height: auto;
+  }
+}
+
+@media (width: 768px) {
+  .showcase .showcase-content {
+    height: 50vh;
+  }
 }
 
 .showcase .showcase-content .showcase-title {
@@ -698,6 +732,12 @@ header .navbar-light .navbar-nav .nav-link:hover {
   }
 }
 
+@media (min-width: 768px) and (max-width: 992px) {
+  .tailored-plan .left-content {
+    padding-top: 60px;
+  }
+}
+
 .tailored-plan .left-content h2 {
   margin-bottom: 2.5rem;
 }
@@ -745,9 +785,9 @@ header .navbar-light .navbar-nav .nav-link:hover {
   }
 }
 
-@media (max-width: 992px) {
-  .tailored-plan .right-content {
-    padding-top: 3.75rem;
+@media (max-width: 767px) {
+  .tailored-plan .right-content .diet-plan {
+    padding-top: 60px;
   }
 }
 
@@ -1144,9 +1184,16 @@ header .navbar-light .navbar-nav .nav-link:hover {
 
 @media (max-width: 992px) {
   .prices .price-plan {
-    margin-top: 50px;
     width: 90%;
     padding: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .prices .price-plan {
+    width: 90%;
+    padding: 30px;
+    margin-top: 50px;
   }
 }
 
@@ -2004,16 +2051,16 @@ header .navbar-light .navbar-nav .nav-link:hover {
   display: none;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 767px) {
   .scroll-top {
-    bottom: 4.375rem;
+    bottom: 105px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .scroll-top {
     left: 50%;
-    bottom: 105px;
+    bottom: 4.375rem;
     right: 0;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);

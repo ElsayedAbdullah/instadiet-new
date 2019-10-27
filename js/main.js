@@ -21,11 +21,28 @@ $(function () {
 
 
   $(window).scroll(function () {
-    if ($(window).scrollTop() >= 100) {
-      $('.call-to-action').css("display", "block");
-    } else {
-      $('.call-to-action').css("display", "none");
+
+    if ($(window).width() <= 992) {
+      if ($(window).scrollTop() >= 100) {
+        $('.call-to-action').css("display", "block");
+      } else {
+        $('.call-to-action').css("display", "none");
+      }
     }
+
+  });
+
+
+  $(window).scroll(function () {
+    if ($(window).width() >= 993) {
+      if ($(window).scrollTop() >= 200) {
+        $('.call-to-action').css("display", "block");
+      } else {
+        $('.call-to-action').css("display", "none");
+      }
+    }
+
+
   });
 
   $("#convertToForm").click(function () {
@@ -106,12 +123,15 @@ $(function () {
   function checkActiveClass() {
     if ($('.diet:first').hasClass("active")) {
       $('.diet-plan-header h3').text('Paleo Diet');
+      $('.left-content h2 span').text('Mona');
     }
     if ($('.diet').eq(1).hasClass("active")) {
       $('.diet-plan-header h3').text('Ketogenic Diet');
+      $('.left-content h2 span').text('Nada');
     }
     if ($('.diet:last').hasClass("active")) {
       $('.diet-plan-header h3').text('Vegeterian Diet');
+      $('.left-content h2 span').text('Ali');
     }
   }
 

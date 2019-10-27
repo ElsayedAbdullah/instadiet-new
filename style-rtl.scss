@@ -17,6 +17,23 @@ body {
   font-family: "DinNext";
 }
 
+.call-to-action {
+
+  @media #{$mobile} {
+    .start-diet {
+      float: none !important;
+    }
+  }
+
+  .navbar-brand {
+    float: $floatLeft;
+  }
+
+  .start-diet {
+    float: $floatRight;
+  }
+}
+
 /* Start showcase */
 .showcase {
   &:after {

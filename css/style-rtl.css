@@ -3,6 +3,20 @@ body {
   font-family: "DinNext";
 }
 
+@media (max-width: 767px) {
+  .call-to-action .start-diet {
+    float: none !important;
+  }
+}
+
+.call-to-action .navbar-brand {
+  float: right;
+}
+
+.call-to-action .start-diet {
+  float: left;
+}
+
 /* Start showcase */
 .showcase:after {
   -webkit-transform: scaleX(-1);
