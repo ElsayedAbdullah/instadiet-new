@@ -2085,6 +2085,11 @@ header#header-blog {
 .footer-blog {
   background-color: #f7f7f7;
   padding-top: 50px;
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
 /* End posts */
@@ -2092,6 +2097,15 @@ header#header-blog {
 
 /////////////////////////////////////////////////////
 // single page
+#wrapper {
+  position: relative;
+  z-index: 20;
+
+  .last-section {
+    box-shadow: 0 20px 20px 0px rgba(0, 0, 0, 0.02);
+  }
+}
+
 .showcase-single {
   background: url(../imgs/single-bg.jpg) center 40% no-repeat/cover;
 
@@ -2119,6 +2133,11 @@ header#header-blog {
   }
 }
 
+section {
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
+}
 
 // Start Single Post
 .single-post {
@@ -2131,13 +2150,14 @@ header#header-blog {
   }
 
   .post-body {
+    margin-bottom: 25px;
 
     p,
     li {
       color: #787878;
       font-weight: 400;
       font-size: 16px;
-      line-height: 1.5;
+      line-height: 28px;
 
       a,
       strong {

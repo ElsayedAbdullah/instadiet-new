@@ -2300,9 +2300,24 @@ header .navbar-light .navbar-nav .nav-link:hover {
 .footer-blog {
   background-color: #f7f7f7;
   padding-top: 50px;
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
 /* End posts */
+#wrapper {
+  position: relative;
+  z-index: 20;
+}
+
+#wrapper .last-section {
+  -webkit-box-shadow: 0 20px 20px 0px rgba(0, 0, 0, 0.02);
+          box-shadow: 0 20px 20px 0px rgba(0, 0, 0, 0.02);
+}
+
 .showcase-single {
   background: url(../imgs/single-bg.jpg) center 40% no-repeat/cover;
 }
@@ -2330,6 +2345,12 @@ header .navbar-light .navbar-nav .nav-link:hover {
   margin-right: 5px;
 }
 
+section {
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
+}
+
 .single-post {
   padding: 110px 0;
   font-family: 'Source Sans Pro', sans-serif;
@@ -2341,12 +2362,16 @@ header .navbar-light .navbar-nav .nav-link:hover {
   }
 }
 
+.single-post .post-body {
+  margin-bottom: 25px;
+}
+
 .single-post .post-body p,
 .single-post .post-body li {
   color: #787878;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 28px;
 }
 
 .single-post .post-body p a,
