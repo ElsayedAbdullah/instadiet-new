@@ -2090,6 +2090,16 @@ header#header-blog {
   right: 0;
   bottom: 0;
   z-index: 1;
+
+  @media #{$maxTab} {
+    position: relative !important;
+  }
+}
+
+.footer-spacer {
+  @media #{$maxTab} {
+    display: none;
+  }
 }
 
 /* End posts */
@@ -2264,6 +2274,11 @@ section {
       width: 80%;
       margin: auto;
 
+      @media #{$mobile} {
+        width: 100%;
+        margin: 0;
+      }
+
       div {
 
         p,
@@ -2320,6 +2335,26 @@ section {
           }
         }
 
+        .image {
+          img {
+            width: 100%;
+            display: block;
+          }
+        }
+
+        .image.image-style-side {
+          float: right;
+          width: 48%;
+          max-width: 48%;
+          margin-left: 2%;
+
+          &:after {
+            content: "";
+            display: block;
+            clear: both;
+          }
+        }
+
         ul {
           list-style: disc;
           padding-left: 40px;
@@ -2340,6 +2375,7 @@ section {
         p:last-child {
           margin-top: 30px;
           line-height: 1.5;
+          margin-bottom: 0;
 
           a {
             display: block;
