@@ -3,12 +3,6 @@ body {
   font-family: "DinNext";
 }
 
-@media (min-width: 650px) and (max-width: 750px) {
-  header .navbar .navbar-nav {
-    text-align: right;
-  }
-}
-
 @media (max-width: 767px) {
   .call-to-action .start-diet {
     float: none !important;

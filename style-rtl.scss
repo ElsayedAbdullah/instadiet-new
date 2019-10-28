@@ -20,15 +20,7 @@ body {
 }
 
 // header
-header {
-  .navbar {
-    .navbar-nav {
-      @media #{$iphone6_7} {
-        text-align: $textLeft;
-      }
-    }
-  }
-}
+
 
 .call-to-action {
   @media #{$mobile} {
