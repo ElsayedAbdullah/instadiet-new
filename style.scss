@@ -1937,13 +1937,6 @@ header {
 //////////////////////////////////////////////////////////
 // blog page
 
-// header
-header#header-blog {
-  // background-color: transparent;
-  // border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  // box-shadow: none;
-}
-
 // showcase-blog
 .showcase-blog,
 .showcase-single {
@@ -2151,7 +2144,7 @@ section {
 
 // Start Single Post
 .single-post {
-  padding: 110px 0;
+  padding: 110px 0 80px;
   font-family: 'Source Sans Pro',
     sans-serif;
 
@@ -2262,6 +2255,7 @@ section {
 
 
 // editor single post
+/*
 .pages-content {
   font-family: 'Source Sans Pro',
     sans-serif;
@@ -2404,3 +2398,44 @@ section {
     }
   }
 }
+
+*/
+
+/* Start Related Posts */
+.related-posts {
+  padding-bottom: 100px;
+
+  @media #{$maxTab} {
+    padding-bottom: 50px;
+  }
+
+  .related-posts-title {
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+
+  .card {
+    @media #{$maxTab} {
+      margin-bottom: 30px;
+    }
+
+    .card-body {
+      .card-title {
+        line-height: 28px;
+        font-size: 16px;
+        font-weight: bold;
+
+        a {
+          color: #1f1f1f;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: $primaryColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* End Related Posts */
