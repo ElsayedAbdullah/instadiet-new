@@ -2365,7 +2365,6 @@ section {
 
 .single-post {
   padding: 110px 0 80px;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
 @media (max-width: 767px) {
@@ -2411,7 +2410,6 @@ section {
 }
 
 .single-post .post-body blockquote p {
-  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 26px;
   color: #1f1f1f;
