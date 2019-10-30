@@ -402,4 +402,44 @@ body {
     bottom: 70px;
   }
 }
+
+.posts .card .card-metabox i {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.single-post .post-body .post-list {
+  padding-right: 40px;
+  padding-left: 0;
+  direction: rtl;
+}
+
+.single-post .post-body .first-letter::first-letter {
+  font-size: 16px;
+  color: #787878;
+}
+
+.single-post .post-body blockquote p {
+  border-left: 0;
+  border-right: 2px solid #1f1f1f;
+}
+
+.single-post .post-tags a {
+  float: right;
+  margin: 0 0 10px 10px;
+}
+
+@media (min-width: 768px) {
+  .offset-md-1 {
+    margin-right: 8.333333%;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .offset-lg-2 {
+    margin-right: 16.666667%;
+    margin-left: 0;
+  }
+}
 /*# sourceMappingURL=style-rtl.css.map */
