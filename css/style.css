@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Poppins:500,700|Source+Sans+Pro:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap");
 @font-face {
   font-family: "DinNext";
   src: url(../fonts/DinNext.otf);
@@ -49,12 +49,15 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p {
+h6 {
   font-weight: normal;
   margin: 0;
   padding: 0;
   line-height: 1.3;
+}
+
+p, textarea, input, button {
+  font-weight: 300;
 }
 
 article,
@@ -600,7 +603,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
 .empathy-blue .empathy-content h2 {
   margin-bottom: 20px;
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -1259,7 +1262,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
 .prices .price-plan .price-item .price {
   font-size: 60px;
   color: #6e6e6e;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .prices .price-plan .price-item .dollar {
@@ -1329,7 +1332,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
 
 .prices .price-content h2 {
   color: #f4f4f4;
-  font-weight: bold;
+  font-weight: 600;
   margin-top: 20px;
   margin-bottom: 20px;
   width: 70%;
@@ -1384,7 +1387,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
 }
 
 .prices .price-content .price-desc + p span {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 /* End prices */
@@ -2644,7 +2647,7 @@ section {
 
 .related-posts .related-posts-title {
   margin-bottom: 30px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .related-posts .card {
@@ -2670,7 +2673,7 @@ section {
 .related-posts .card .card-body .card-title {
   line-height: 28px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .related-posts .card .card-body .card-title a {
@@ -2685,4 +2688,465 @@ section {
 }
 
 /* End Related Posts */
+/* Start Showcase */
+.showcase-database {
+  background: url(../imgs/database-bg.png) center center no-repeat/cover;
+  height: 565px;
+  padding-top: 79px;
+}
+
+.showcase-database .showcase-content {
+  height: 485px;
+  position: relative;
+}
+
+.showcase-database .showcase-content .showcase-title {
+  padding-top: 100px;
+  font-weight: 600;
+  font-size: 56px;
+  text-align: center;
+  color: #2A338F;
+}
+
+.showcase-database .showcase-content .search-box {
+  background: #F7F8FC;
+  border: 1px solid #E3E4E8;
+  border-radius: 10px 10px 0px 0px;
+  padding: 60px 100px;
+  position: absolute;
+  width: 100%;
+  bottom: -2px;
+}
+
+.showcase-database .showcase-content .search-box form {
+  position: relative;
+}
+
+.showcase-database .showcase-content .search-box form .input-search {
+  width: 100%;
+  padding: 30px 40px;
+  background: #FFFFFF;
+  border: 2px solid #EBECF0;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #595A6E;
+}
+
+.showcase-database .showcase-content .search-box form .input-search:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+.showcase-database .showcase-content .search-box form .input-search::-webkit-input-placeholder {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: #808191;
+}
+
+.showcase-database .showcase-content .search-box form .input-search:focus::-webkit-input-placeholder {
+  opacity: 0.4;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.showcase-database .showcase-content .search-box form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ef5fa2;
+  border: 0;
+  border-radius: 0px 10px 10px 0px;
+  height: 100%;
+}
+
+.showcase-database .showcase-content .search-box form button i {
+  color: #fff;
+  display: block;
+  padding: 0 30px;
+  font-size: 30px;
+}
+
+/* End Showcase */
+/* Start About-Instadiet */
+.about-instadiet {
+  background-color: #F5F6FC;
+}
+
+.about-instadiet-content {
+  padding: 70px 100px;
+  background: #FFFFFF;
+  border: 1px solid #E3E4E8;
+}
+
+.about-instadiet-title {
+  font-size: 36px;
+  line-height: 46px;
+  text-align: center;
+  color: #2A338F;
+  font-weight: 600;
+}
+
+.about-instadiet-desc {
+  margin-bottom: 80px;
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 28px;
+  /* or 175% */
+  text-align: center;
+  color: #9C9DAD;
+}
+
+/* End About-Instadiet */
+/* Start Contact-Us */
+@media (max-width: 767px) {
+  #contact-us {
+    padding: 60px 0;
+  }
+}
+
+#contact-us .contact-us-widget {
+  border: 1px solid #E9E9F0;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+  #contact-us .contact-us-widget {
+    margin-bottom: 27px;
+  }
+}
+
+#contact-us .contact-us-widget h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.125rem;
+  color: #2A338F;
+  border-bottom: 1px solid #F0F0F5;
+  padding-bottom: 1.25rem;
+  padding-top: 1.875rem;
+  padding-left: 3.125rem;
+}
+
+@media (max-width: 767px) {
+  #contact-us .contact-us-widget h3 {
+    padding-top: 0.75rem;
+    padding-left: 1.1875rem;
+  }
+}
+
+#contact-us .contact-us-widget ul {
+  padding-left: 3.125rem;
+  padding-right: 3.125rem;
+}
+
+@media (max-width: 767px) {
+  #contact-us .contact-us-widget ul {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+#contact-us .contact-us-widget ul li {
+  padding: 30px 0 30px 50px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  #contact-us .contact-us-widget ul li {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+#contact-us .contact-us-widget ul li:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 45px;
+  height: 45px;
+}
+
+@media (max-width: 767px) {
+  #contact-us .contact-us-widget ul li:before {
+    top: 10px;
+  }
+}
+
+#contact-us .contact-us-widget ul li:nth-child(1):before {
+  background: url(../imgs/newsletter.svg) no-repeat center;
+}
+
+#contact-us .contact-us-widget ul li:nth-child(2) a {
+  font-weight: 600;
+}
+
+#contact-us .contact-us-widget ul li:nth-child(2):before {
+  background: url(../imgs/phone-call.svg) no-repeat center;
+}
+
+#contact-us .contact-us-widget ul li:nth-child(3):before {
+  background: url(../imgs/square-pin.svg) no-repeat center;
+}
+
+#contact-us .contact-us-widget ul li:not(:last-child) {
+  border-bottom: 1px solid #F0F0F5;
+}
+
+#contact-us .contact-us-widget ul li a {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: #595A6E;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#contact-us .contact-us-widget ul li a:hover {
+  color: #ef5fa2;
+}
+
+#contact-us .contact-us-widget ul li p {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: #595A6E;
+}
+
+#contact-us .contact-us-form {
+  padding-left: 30px;
+}
+
+#contact-us .contact-us-form h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.125rem;
+  color: #2A338F;
+  margin-bottom: 1.875rem;
+}
+
+#contact-us .contact-us-form input[type="text"],
+#contact-us .contact-us-form input[type="email"],
+#contact-us .contact-us-form textarea {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 4px solid #DADAE0;
+  padding-left: 1rem;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: #808191;
+  margin-bottom: 2.6875rem;
+  outline: none;
+}
+
+#contact-us .contact-us-form input[type="text"]::-webkit-input-placeholder,
+#contact-us .contact-us-form input[type="email"]::-webkit-input-placeholder,
+#contact-us .contact-us-form textarea::-webkit-input-placeholder {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: #808191;
+}
+
+#contact-us .contact-us-form input[type="text"]:focus::-webkit-input-placeholder,
+#contact-us .contact-us-form input[type="email"]:focus::-webkit-input-placeholder,
+#contact-us .contact-us-form textarea:focus::-webkit-input-placeholder {
+  opacity: 0.4;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+#contact-us .contact-us-form textarea {
+  height: 8.5625rem;
+  resize: none;
+}
+
+@media (max-width: 767px) {
+  #contact-us .contact-us-form textarea {
+    margin-bottom: 20px;
+  }
+}
+
+#contact-us .contact-us-form button[type="submit"] {
+  float: right;
+  font-size: 0.875rem;
+  padding: 17px 60px 17px 40px;
+}
+
+@media (max-width: 767px) {
+  #contact-us .contact-us-form button[type="submit"] {
+    width: 100%;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
+
+/* End Contact-Us */
+/* Start Newsletter */
+#newsletter {
+  background-color: #F5F6FA;
+  padding-top: 5.5rem;
+  padding-bottom: 3.75rem;
+}
+
+@media (max-width: 1366px) {
+  #newsletter {
+    padding: 70px 0 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  #newsletter {
+    padding: 60px 0;
+  }
+}
+
+#newsletter h2 {
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 767px) {
+  #newsletter h2 {
+    margin-bottom: 0.9375rem;
+  }
+}
+
+#newsletter h2 ~ p {
+  font-size: 16px;
+  line-height: 28px;
+  color: #9D9EAE;
+  width: 80%;
+}
+
+@media (max-width: 767px) {
+  #newsletter h2 ~ p {
+    font-size: 14px;
+  }
+}
+
+#newsletter form {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 98px 141px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 98px 141px rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+  height: 9.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem;
+}
+
+@media (max-width: 1366px) {
+  #newsletter form {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  #newsletter form {
+    display: block;
+    padding: 1.875rem 1.5rem;
+    margin-top: 38px;
+    height: 200px;
+  }
+}
+
+#newsletter form input[type="email"] {
+  width: 62%;
+  border: 0;
+  border-bottom: 4px solid #F0F0F5;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  font-size: 1.25rem;
+  color: #808191;
+}
+
+@media (max-width: 1366px) {
+  #newsletter form input[type="email"] {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #newsletter form input[type="email"] {
+    width: 100%;
+    font-size: 1rem;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+#newsletter form input[type="email"]::-webkit-input-placeholder {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #808191;
+}
+
+@media (max-width: 767px) {
+  #newsletter form input[type="email"]::-webkit-input-placeholder {
+    font-size: 1rem;
+  }
+}
+
+#newsletter form input[type="email"]:focus::-webkit-input-placeholder {
+  opacity: 0.4;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+#newsletter form button[type="submit"] {
+  font-size: 0.875rem;
+  padding: 17px 60px 17px 40px;
+}
+
+@media (max-width: 767px) {
+  #newsletter form button[type="submit"] {
+    width: 100%;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
+
+#newsletter .private-data {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  #newsletter .private-data {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+#newsletter .private-data p {
+  font-size: 0.8125rem;
+  line-height: 0.8125rem;
+  color: #9D9EAE;
+  margin-left: 0.5rem;
+  margin-top: 0.875rem;
+  display: inline-block;
+}
+
+#newsletter .private-data p i {
+  margin: 0 5px;
+}
+
+/* End Newsletter */
+.footer-database {
+  padding-top: 80px;
+}
 /*# sourceMappingURL=style.css.map */
