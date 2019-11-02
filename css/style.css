@@ -137,12 +137,15 @@ button:focus {
 }
 
 .primary-btn:hover i {
-  margin-left: 15px;
-  font-size: 16px;
+  right: 25px;
 }
 
 .primary-btn i {
-  margin-left: 10px;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -2370,7 +2373,6 @@ header .navbar-light .navbar-nav .nav-link:hover {
 
 section {
   position: relative;
-  z-index: 10;
   background-color: #fff;
 }
 
@@ -2708,19 +2710,33 @@ section {
   }
 }
 
+@media (min-width: 768px) and (max-width: 992px) {
+  .showcase-database {
+    height: 451px;
+  }
+}
+
 .showcase-database .showcase-content {
   height: 485px;
+  padding-top: 100px;
   position: relative;
 }
 
 @media (max-width: 767px) {
   .showcase-database .showcase-content {
-    height: 370px;
+    height: 291px;
+    padding-top: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .showcase-database .showcase-content {
+    height: 371px;
+    padding-top: 60px;
   }
 }
 
 .showcase-database .showcase-content .showcase-title {
-  padding-top: 100px;
   font-weight: 600;
   font-size: 56px;
   text-align: center;
@@ -2730,7 +2746,6 @@ section {
 @media (max-width: 767px) {
   .showcase-database .showcase-content .showcase-title {
     font-size: 36px;
-    padding-top: 60px;
   }
 }
 
@@ -2756,7 +2771,7 @@ section {
 
 @media (min-width: 768px) and (max-width: 992px) {
   .showcase-database .showcase-content .search-box {
-    padding: 40px 80px;
+    padding: 40px 80px 50px;
   }
 }
 
@@ -2785,7 +2800,7 @@ section {
 
 @media (min-width: 768px) and (max-width: 992px) {
   .showcase-database .showcase-content .search-box form .input-search {
-    padding: 20px 30px;
+    padding: 20px 25px;
   }
 }
 
@@ -2875,8 +2890,11 @@ section {
   font-size: 36px;
   line-height: 46px;
   text-align: center;
-  color: #2a338f;
   font-weight: 600;
+}
+
+.about-instadiet-title a {
+  color: #2a338f;
 }
 
 @media (max-width: 767px) {
@@ -3089,6 +3107,12 @@ section {
     padding-top: 18px;
     padding-bottom: 18px;
   }
+  #contact-us .contact-us-form button[type="submit"]:hover {
+    right: 75px;
+  }
+  #contact-us .contact-us-form button[type="submit"] i {
+    right: 80px;
+  }
 }
 
 /* End Contact-Us */
@@ -3118,6 +3142,12 @@ section {
 @media (max-width: 767px) {
   #newsletter h2 {
     margin-bottom: 0.9375rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #newsletter h2 {
+    margin-bottom: 0;
   }
 }
 
@@ -3231,6 +3261,12 @@ section {
     padding-top: 18px;
     padding-bottom: 18px;
   }
+  #newsletter form button[type="submit"] i {
+    right: 80px;
+  }
+  #newsletter form button[type="submit"]:hover {
+    right: 75px;
+  }
 }
 
 #newsletter .private-data {
@@ -3245,6 +3281,7 @@ section {
             transform: translateX(-50%);
     bottom: 25px;
     text-align: center;
+    width: 100%;
   }
 }
 
@@ -3276,6 +3313,905 @@ section {
   .footer-database {
     padding-top: 60px;
     padding-bottom: 15px !important;
+  }
+}
+
+.search-result {
+  overflow: visible;
+}
+
+@media (max-width: 992px) {
+  .search-result .showcase-content {
+    padding-top: 50px;
+  }
+}
+
+.search-result .showcase-desc {
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #595a6e;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .search-result .showcase-desc {
+    font-size: 14px;
+  }
+}
+
+.search-result .showcase-title:before {
+  content: open-quote;
+}
+
+.search-result .showcase-title:after {
+  content: close-quote;
+}
+
+@media (max-width: 767px) {
+  .search-result .showcase-title {
+    padding-top: 10px !important;
+  }
+}
+
+.search-result .search-box {
+  position: relative;
+}
+
+.search-result .search-box .breadcrumb {
+  position: absolute;
+  bottom: -1px;
+  padding: 3px 44px;
+  margin-bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #fff;
+  z-index: 2;
+  border: 1px solid #ccc;
+  border-radius: 100px 100px 0px 0px;
+  border-bottom: 0;
+}
+
+.search-result .search-box .breadcrumb-item {
+  font-size: 14px;
+  line-height: 23px;
+  text-align: center;
+  color: #9c9dad;
+}
+
+.search-result .search-box .breadcrumb-item a {
+  color: #9c9dad;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .search-result .search-box .breadcrumb {
+    padding: 3px 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .search-result .search-box .breadcrumb {
+    bottom: 55px;
+    padding: 3px 15px;
+    background: none;
+    border: 0;
+  }
+  .search-result .search-box .breadcrumb-item {
+    font-size: 13px;
+  }
+}
+
+/* start search-info */
+.search-info {
+  overflow: visible;
+  background-color: #f5f6fc;
+}
+
+.search-info .search-info-content {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #e3e4e8;
+  padding: 38px 100px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .search-info .search-info-content {
+    padding: 30px;
+  }
+}
+
+.search-info .search-info-content .quantity label {
+  font-size: 14px;
+  line-height: 23px;
+  color: #9c9dad;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .search-info .search-info-content .quantity label {
+    margin-bottom: 25px;
+  }
+}
+
+.search-info .search-info-content .quantity label .button {
+  position: absolute;
+  padding: 2px 5px;
+  right: 9px;
+  width: 25px;
+  height: 25px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: 25px;
+  border-left: 1px solid #e3e4e8;
+}
+
+@media (max-width: 767px) {
+  .search-info .search-info-content .quantity label .button {
+    border: 1px solid #e3e4e8;
+    height: 36px;
+    line-height: 36px;
+    padding: 0;
+    width: 36px;
+  }
+}
+
+.search-info .search-info-content .quantity label .button.inc {
+  top: 38px;
+}
+
+@media (max-width: 767px) {
+  .search-info .search-info-content .quantity label .button.inc {
+    right: -36px;
+    border-radius: 0 5px 5px 0;
+    top: 33px;
+  }
+}
+
+.search-info .search-info-content .quantity label .button.dec {
+  bottom: 0;
+  top: auto;
+  border-top: 1px solid #e3e4e8;
+}
+
+@media (max-width: 767px) {
+  .search-info .search-info-content .quantity label .button.dec {
+    left: 0;
+    border-radius: 5px 0 0 5px;
+  }
+}
+
+.search-info .search-info-content .quantity .number {
+  margin-top: 15px;
+  display: block;
+  width: 90%;
+  padding: 14px 11px 13px 20px;
+  background: #ffffff;
+  border: 1px solid #ebecf0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #595a6e;
+  outline: none;
+}
+
+@media (max-width: 767px) {
+  .search-info .search-info-content .quantity .number {
+    margin-top: 10px;
+    border: 0;
+    margin-left: 36px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    text-align: center;
+    border-top: 1px solid #e3e4e8;
+    border-bottom: 1px solid #e3e4e8;
+    border-radius: 0;
+  }
+}
+
+.search-info .search-info-content .quantity .number::-webkit-inner-spin-button, .search-info .search-info-content .quantity .number::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.search-info .search-info-content .choose {
+  font-size: 14px;
+  line-height: 23px;
+  color: #595a6e;
+}
+
+.search-info .search-info-content .choose p {
+  font-size: 14px;
+  line-height: 23px;
+  color: #9c9dad;
+}
+
+@media (max-width: 767px) {
+  .search-info .search-info-content .choose p {
+    margin-bottom: 10px;
+  }
+}
+
+.search-info .search-info-content .choose label {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .search-info .search-info-content .choose label {
+    margin-bottom: 10px;
+  }
+}
+
+.search-info .search-info-content .choose label input {
+  display: none;
+}
+
+.search-info .search-info-content .choose label input:checked ~ span {
+  border-color: #ef5fa2;
+  color: #ef5fa2;
+  background: rgba(239, 95, 162, 0.15);
+}
+
+.search-info .search-info-content .choose label input:checked ~ span:before {
+  display: inline-block;
+}
+
+.search-info .search-info-content .choose label span {
+  position: relative;
+  display: block;
+  margin-right: 5px;
+  background: #ffffff;
+  border: 1px solid #ebecf0;
+  border-radius: 5px;
+  padding: 13px 20px 13px 30px;
+}
+
+.search-info .search-info-content .choose label span:before {
+  content: "\f00c";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #ef5fa2;
+  font-family: fontawesome;
+  display: none;
+  font-size: 12px;
+}
+
+.search-info .search-info-content .choose button {
+  font-size: 13px;
+  line-height: 21px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #ef5fa2;
+  background: none;
+  border: 0;
+}
+
+@media (max-width: 767px) {
+  .search-info {
+    padding-top: 10px;
+  }
+  .search-info .container {
+    padding: 0 10px;
+  }
+  .search-info .container .search-info-content {
+    padding: 20px;
+  }
+  .search-info .container .search-info-content .no-padd {
+    padding-right: 0;
+  }
+  .search-info .container .choose-content {
+    overflow-x: auto;
+  }
+  .search-info .container .choose-content .content {
+    min-width: 750px;
+  }
+  .search-info .container .choose-content .content label span {
+    padding: 6px 15px 5px 26px;
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  color: #9c9dad;
+}
+
+/* End search-info */
+/* Start nutrients */
+.nutrients {
+  background-color: #f5f6fc;
+  padding-bottom: 40px;
+}
+
+.nutrients .nutrients-content {
+  background: #ffffff;
+  border: 1px solid #e3e4e8;
+  border-top: 0;
+  border-radius: 0px 0px 10px 10px;
+  padding: 0 100px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .nutrients .nutrients-content {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nutrients .nutrients-content {
+    padding: 0 50px;
+  }
+}
+
+.nutrients .nutrients-content .nutrient {
+  position: relative;
+  padding-left: 85px;
+  padding-top: 63px;
+  padding-bottom: 63px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .nutrients .nutrients-content .nutrient {
+    padding-left: 75px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.nutrients .nutrients-content .nutrient img {
+  position: absolute;
+  top: 63px;
+  left: 0;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .nutrients .nutrients-content .nutrient img {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    top: 45px;
+  }
+}
+
+.nutrients .nutrients-content .nutrient .nutrient-info .nutrient-name {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #41436b;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .nutrients .nutrients-content .nutrient .nutrient-info .nutrient-name {
+    font-size: 20px;
+  }
+}
+
+.nutrients .nutrients-content .nutrient .nutrient-info p {
+  font-size: 14px;
+  line-height: 23px;
+  color: #595a6e;
+  margin-bottom: 0;
+}
+
+.nutrients .nutrients-content .nutrient .nutrient-info p .percent.prot {
+  color: #2a338f;
+}
+
+.nutrients .nutrients-content .nutrient .nutrient-info p .percent.fat {
+  color: #ef5fa2;
+}
+
+.nutrients .nutrients-content .nutrient .nutrient-info p .percent.carb {
+  color: #8f94b8;
+}
+
+.nutrients .nutrients-content .chart {
+  border-left: 1px solid #e3e4e8;
+  position: relative;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .nutrients .nutrients-content .chart {
+    height: 370px;
+    border: 0;
+  }
+}
+
+.nutrients .nutrients-content .chart .bie-chart {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  border: 5px solid #8f94b8;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  padding-top: 27px;
+  line-height: 22px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-bottom: 5px solid #ef5fa2;
+  border-right: 5px solid #2a338f;
+  border-top: 5px solid #2a338f;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  color: #41436b;
+}
+
+@media (max-width: 767px) {
+  .nutrients .nutrients-content .chart .bie-chart {
+    width: 147px;
+    height: 147px;
+    border: 10px solid #8f94b8;
+    border-bottom: 10px solid #ef5fa2;
+    border-right: 10px solid #2a338f;
+    border-top: 10px solid #2a338f;
+    right: auto;
+    padding-top: 38px;
+    line-height: 30px;
+    top: 11%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-size: 36px;
+  }
+}
+
+.nutrients .nutrients-content .chart .bie-chart span {
+  font-size: 14px;
+  color: #595a6e;
+  display: block;
+  font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  .nutrients {
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+  .nutrients .container {
+    padding: 0 10px;
+  }
+  .nutrients .chart-info {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 100%;
+    top: 62%;
+  }
+  .nutrients .chart-info h3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #41436b;
+    margin-bottom: 10px;
+  }
+  .nutrients .chart-info h3:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 5px solid #ef5fa2;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+  }
+  .nutrients .chart-info h3:first-child:before {
+    border-color: #2a338f;
+  }
+  .nutrients .chart-info h3:last-child:before {
+    border-color: #8f94b8;
+  }
+  .nutrients .chart-info h3 .quantity {
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 300;
+    color: #595a6e;
+  }
+  .nutrients .chart-info h3 .percent {
+    color: #ef5fa2;
+    font-weight: 300;
+  }
+  .nutrients .chart-info h3 .percent.fat {
+    color: #2a338f;
+  }
+  .nutrients .chart-info h3 .percent.carb {
+    color: #8f94b8;
+  }
+}
+
+/* End nutrients */
+/* Start Micronutrients */
+.micronutrients {
+  background-color: #f5f6fc;
+  padding-bottom: 40px;
+}
+
+.micronutrients-content {
+  border: 1px solid #ebecf0;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+@media (max-width: 767px) {
+  .micronutrients-content {
+    margin-bottom: 10px;
+  }
+}
+
+.micronutrients-content .table-content {
+  padding: 40px 100px 3px 100px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .micronutrients-content .table-content {
+    padding: 20px 20px 3px;
+  }
+}
+
+@media (max-width: 767px) {
+  .micronutrients-content .table-content {
+    padding: 8px 14px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .micronutrients-content .table-content table {
+    margin-bottom: 0;
+  }
+}
+
+.micronutrients-content .table-content table th,
+.micronutrients-content .table-content table td {
+  padding: 12px 6px;
+}
+
+@media (max-width: 767px) {
+  .micronutrients-content .table-content table th,
+  .micronutrients-content .table-content table td {
+    padding: 11px 6px;
+  }
+}
+
+.micronutrients-content .table-content table thead tr th {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #9c9dad;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .micronutrients-content .table-content table thead tr th {
+    border-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .micronutrients-content .table-content table thead tr th {
+    border-top: 0;
+    font-size: 10px;
+  }
+}
+
+.micronutrients-content .table-content table tbody tr th {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #595a6e;
+}
+
+@media (max-width: 767px) {
+  .micronutrients-content .table-content table tbody tr th {
+    font-size: 13px;
+  }
+}
+
+.micronutrients-content .table-content table tbody tr td {
+  font-size: 14px;
+  line-height: 23px;
+  color: #595a6e;
+}
+
+@media (max-width: 992px) {
+  .micronutrients-content .table-content table tbody tr td {
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+.micronutrients-content .show-more {
+  text-align: center;
+  border-top: 1px solid #eeeff1;
+  padding: 15px 0;
+}
+
+@media (max-width: 767px) {
+  .micronutrients-content .show-more {
+    padding: 13px 0;
+  }
+}
+
+.micronutrients-content .show-more button {
+  font-size: 14px;
+  line-height: 23px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #ef5fa2;
+  border: 0;
+  background: none;
+}
+
+@media (max-width: 767px) {
+  .micronutrients-content .show-more button {
+    font-size: 13px;
+  }
+}
+
+.micronutrients-content .show-more button i {
+  font-size: 10px;
+}
+
+.micronutrients .activities {
+  background: #ffffff;
+  border: 1px solid #ebecf0;
+  border-radius: 10px;
+}
+
+.micronutrients .activities-title {
+  font-size: 18px;
+  line-height: 30px;
+  color: #595a6e;
+  padding: 28px 60px 20px;
+  border-bottom: 1px solid #ebecf0;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .micronutrients .activities-title {
+    padding: 28px 30px 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .micronutrients .activities-title {
+    text-align: center;
+    padding-top: 20px;
+  }
+}
+
+.micronutrients .activities-title span {
+  color: #2a338f;
+  font-weight: 600;
+}
+
+.micronutrients .activities ul {
+  padding-left: 60px;
+  padding-bottom: 29px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .micronutrients .activities ul {
+    padding-left: 30px;
+    padding-bottom: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .micronutrients .activities ul {
+    padding-bottom: 20px;
+  }
+}
+
+.micronutrients .activities ul li {
+  position: relative;
+  padding-left: 100px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .micronutrients .activities ul li {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+
+@media (max-width: 767px) {
+  .micronutrients .activities ul li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.micronutrients .activities ul li:before {
+  content: "Or";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  -webkit-transform: translateX(-150%);
+          transform: translateX(-150%);
+  background-color: #fff;
+  padding: 0 6px;
+  z-index: 2;
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  color: #cbcde0;
+}
+
+.micronutrients .activities ul li:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 240px;
+  height: 1px;
+  background-color: #ebecf0;
+  margin: auto;
+  display: block;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .micronutrients .activities ul li:after {
+    width: 200px;
+  }
+}
+
+.micronutrients .activities ul li:last-child:after, .micronutrients .activities ul li:last-child:before {
+  display: none;
+}
+
+.micronutrients .activities ul li img {
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+
+@media (max-width: 767px) {
+  .micronutrients .activities ul li img {
+    top: 20px;
+  }
+}
+
+.micronutrients .activities ul li h2 {
+  font-size: 24px;
+  line-height: 36px;
+  color: #41436b;
+  font-weight: 600;
+}
+
+.micronutrients .activities ul li span {
+  font-size: 14px;
+  line-height: 23px;
+  color: #595a6e;
+  display: block;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .micronutrients {
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+  .micronutrients .container {
+    padding: 0 10px;
+  }
+}
+
+/* End Micronutrients */
+/* Start Facts */
+.facts {
+  background-color: #f5f6fc;
+}
+
+.facts .fact {
+  background: #ffffff;
+  border: 1px solid #ebecf0;
+  border-radius: 10px;
+  padding: 45px 65px 55px;
+  position: relative;
+  padding-left: 100px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .facts .fact {
+    padding: 45px 30px 55px;
+    padding-left: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .facts .fact {
+    padding: 30px 19px 40px 60px;
+    margin-bottom: 10px;
+  }
+}
+
+.facts .fact img {
+  position: absolute;
+  top: 48px;
+  left: 60px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .facts .fact img {
+    left: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .facts .fact img {
+    left: 20px;
+  }
+}
+
+.facts .fact h3 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #595a6e;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .facts .fact h3 {
+    font-size: 16px;
+  }
+}
+
+.facts .fact p {
+  font-size: 13px;
+  line-height: 24px;
+  color: #767791;
+  margin-bottom: 0;
+}
+
+.facts .fact p .read-more {
+  background-color: #e4e4eb;
+  border-radius: 100px;
+  width: 34px;
+  height: 16px;
+  border: 0;
+  line-height: 16px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.facts .fact p .read-more span.circle {
+  display: inline-block;
+  background-color: #767791;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+@media (max-width: 767px) {
+  .facts {
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+  .facts .container {
+    padding: 0 10px;
+  }
+}
+
+/* End Facts */
+/* Start newsletter-search */
+@media (max-width: 992px) {
+  .newsletter-search {
+    padding-top: 40px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
