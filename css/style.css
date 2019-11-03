@@ -114,7 +114,7 @@ button:focus {
   font-weight: 500;
   font-size: 18px;
   text-align: center;
-  text-transform: capitalize;
+  text-transform: uppercase;
   background: #ef5fa2;
   border-radius: 5px;
   color: #ffffff !important;
@@ -136,11 +136,11 @@ button:focus {
   background-color: #ed4895;
 }
 
-.primary-btn:hover i {
+.primary-btn:hover img {
   right: 25px;
 }
 
-.primary-btn i {
+.primary-btn img {
   position: absolute;
   right: 30px;
   top: 50%;
@@ -1312,9 +1312,8 @@ header .navbar-light .navbar-nav .nav-link:hover {
 }
 
 .prices .price-plan button {
-  padding: 10px 20px;
+  padding: 17px 54px 17px 30px;
   font-size: 16px;
-  text-transform: capitalize;
 }
 
 .prices .price-content {
@@ -2121,7 +2120,13 @@ header .navbar-light .navbar-nav .nav-link:hover {
 
 @media (max-width: 767px) {
   .scroll-top {
-    bottom: 105px;
+    bottom: 120px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .scroll-top {
+    bottom: 4.5rem;
   }
 }
 
@@ -2225,17 +2230,12 @@ header .navbar-light .navbar-nav .nav-link:hover {
 /* Start posts */
 .posts {
   padding: 100px 0;
+  border-bottom: 1px solid #eee;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .posts {
     padding: 60px 0 30px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .posts {
-    padding: 100px 0 70px;
   }
 }
 
@@ -2248,7 +2248,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   margin-bottom: 30px;
-  min-height: 485px;
+  min-height: 500px;
 }
 
 @media (max-width: 767px) {
@@ -2312,25 +2312,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
 }
 
 .footer-blog {
-  background-color: #f7f7f7;
   padding-top: 50px;
-  position: static;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-}
-
-@media (max-width: 992px) {
-  .footer-blog {
-    position: relative !important;
-  }
-}
-
-@media (max-width: 992px) {
-  .footer-spacer {
-    display: none;
-  }
 }
 
 /* End posts */
@@ -2340,8 +2322,7 @@ header .navbar-light .navbar-nav .nav-link:hover {
 }
 
 #wrapper .last-section {
-  -webkit-box-shadow: 0 20px 20px 0px rgba(0, 0, 0, 0.02);
-          box-shadow: 0 20px 20px 0px rgba(0, 0, 0, 0.02);
+  border-bottom: 1px solid #eee;
 }
 
 .showcase-single {
@@ -2649,7 +2630,7 @@ section {
 
 @media (max-width: 992px) {
   .related-posts {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
 }
 
@@ -3415,6 +3396,12 @@ section {
   padding: 38px 100px;
 }
 
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .search-info .search-info-content {
+    padding: 30px;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 992px) {
   .search-info .search-info-content {
     padding: 30px;
@@ -3437,7 +3424,7 @@ section {
 .search-info .search-info-content .quantity label .button {
   position: absolute;
   padding: 2px 5px;
-  right: 9px;
+  right: -14px;
   width: 25px;
   height: 25px;
   -webkit-user-select: none;
@@ -3447,7 +3434,7 @@ section {
   cursor: pointer;
   text-align: center;
   line-height: 25px;
-  border-left: 1px solid #e3e4e8;
+  border: 1px solid #e3e4e8;
 }
 
 @media (max-width: 767px) {
@@ -3456,18 +3443,21 @@ section {
     height: 36px;
     line-height: 36px;
     padding: 0;
-    width: 36px;
+    min-width: 36px;
   }
 }
 
 .search-info .search-info-content .quantity label .button.inc {
   top: 38px;
+  border-bottom: 0;
+  border-radius: 0 5px 0 0;
 }
 
 @media (max-width: 767px) {
   .search-info .search-info-content .quantity label .button.inc {
     right: -36px;
     border-radius: 0 5px 5px 0;
+    border-bottom: 1px solid #e3e4e8;
     top: 33px;
   }
 }
@@ -3476,6 +3466,7 @@ section {
   bottom: 0;
   top: auto;
   border-top: 1px solid #e3e4e8;
+  border-radius: 0 0 5px 0;
 }
 
 @media (max-width: 767px) {
@@ -3488,16 +3479,17 @@ section {
 .search-info .search-info-content .quantity .number {
   margin-top: 15px;
   display: block;
-  width: 90%;
-  padding: 14px 11px 13px 20px;
+  min-width: 50px;
   background: #ffffff;
   border: 1px solid #ebecf0;
-  border-radius: 5px;
+  border-radius: 5px 0 0 5px;
+  border-right: 0;
+  text-align: center;
   font-weight: 600;
   font-size: 14px;
-  line-height: 21px;
   color: #595a6e;
   outline: none;
+  height: 50px;
 }
 
 @media (max-width: 767px) {
@@ -3573,6 +3565,12 @@ section {
   padding: 13px 20px 13px 30px;
 }
 
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .search-info .search-info-content .choose label span {
+    padding: 13px 15px 13px 25px;
+  }
+}
+
 .search-info .search-info-content .choose label span:before {
   content: "\f00c";
   position: absolute;
@@ -3584,6 +3582,12 @@ section {
   font-family: fontawesome;
   display: none;
   font-size: 12px;
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .search-info .search-info-content .choose label span:before {
+    left: 5px;
+  }
 }
 
 .search-info .search-info-content .choose button {
@@ -3620,6 +3624,13 @@ section {
   }
 }
 
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .search-info .no-padd {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
 .breadcrumb-item + .breadcrumb-item::before {
   content: ">";
   color: #9c9dad;
@@ -3638,6 +3649,12 @@ section {
   border-top: 0;
   border-radius: 0px 0px 10px 10px;
   padding: 0 100px;
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .nutrients .nutrients-content {
+    padding: 0 100px 0 30px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -3661,7 +3678,6 @@ section {
 
 @media (min-width: 768px) and (max-width: 992px) {
   .nutrients .nutrients-content .nutrient {
-    padding-left: 75px;
     padding-top: 40px;
     padding-bottom: 40px;
   }
@@ -3675,9 +3691,7 @@ section {
 
 @media (min-width: 768px) and (max-width: 992px) {
   .nutrients .nutrients-content .nutrient img {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
-    top: 45px;
+    top: 40px;
   }
 }
 
@@ -3686,12 +3700,6 @@ section {
   font-size: 24px;
   line-height: 36px;
   color: #41436b;
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .nutrients .nutrients-content .nutrient .nutrient-info .nutrient-name {
-    font-size: 20px;
-  }
 }
 
 .nutrients .nutrients-content .nutrient .nutrient-info p {
@@ -3721,16 +3729,78 @@ section {
 
 @media (max-width: 767px) {
   .nutrients .nutrients-content .chart {
-    height: 370px;
+    height: 310px;
     border: 0;
   }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .nutrients .nutrients-content .chart {
+    height: 170px;
+    border: 0;
+    border-top: 1px solid #eee;
+  }
+}
+
+@media (max-width: 992px) {
+  .nutrients .nutrients-content .chart #doughnut-chart {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: -6%;
+  }
+}
+
+@media (max-width: 767px) {
+  .nutrients .nutrients-content .chart #doughnut-chart {
+    top: 10px;
+  }
+}
+
+.nutrients .nutrients-content .chart .donut-inner {
+  margin-top: -75px;
+  margin-left: 50px;
+  line-height: 22px;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  color: #41436b;
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .nutrients .nutrients-content .chart .donut-inner {
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nutrients .nutrients-content .chart .donut-inner {
+    position: absolute;
+    top: 76px;
+    left: 49.5%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .nutrients .nutrients-content .chart .donut-inner {
+    top: 95px;
+  }
+}
+
+.nutrients .nutrients-content .chart .donut-inner span {
+  font-size: 14px;
+  color: #595a6e;
+  display: block;
+  font-weight: 300;
 }
 
 .nutrients .nutrients-content .chart .bie-chart {
   width: 104px;
   height: 104px;
   border-radius: 50%;
-  border: 5px solid #8f94b8;
+  border: 10px solid #8f94b8;
   position: absolute;
   top: 50%;
   right: 0;
@@ -3738,9 +3808,9 @@ section {
   line-height: 22px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  border-bottom: 5px solid #ef5fa2;
-  border-right: 5px solid #2a338f;
-  border-top: 5px solid #2a338f;
+  border-bottom: 10px solid #ef5fa2;
+  border-right: 10px solid #2a338f;
+  border-top: 10px solid #2a338f;
   font-weight: 600;
   font-size: 24px;
   text-align: center;
@@ -3861,6 +3931,12 @@ section {
   }
 }
 
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .micronutrients-content .table-content {
+    padding: 40px 30px 3px 30px;
+  }
+}
+
 @media (max-width: 767px) {
   .micronutrients-content .table-content {
     padding: 8px 14px 0;
@@ -3891,17 +3967,11 @@ section {
   line-height: 18px;
   text-transform: uppercase;
   color: #9c9dad;
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .micronutrients-content .table-content table thead tr th {
-    border-top: 0;
-  }
+  border-top: 0;
 }
 
 @media (max-width: 767px) {
   .micronutrients-content .table-content table thead tr th {
-    border-top: 0;
     font-size: 10px;
   }
 }
@@ -3976,11 +4046,13 @@ section {
   color: #595a6e;
   padding: 28px 60px 20px;
   border-bottom: 1px solid #ebecf0;
+  width: 90%;
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
   .micronutrients .activities-title {
     padding: 28px 30px 20px;
+    width: 100%;
   }
 }
 
@@ -3988,6 +4060,7 @@ section {
   .micronutrients .activities-title {
     text-align: center;
     padding-top: 20px;
+    width: 100%;
   }
 }
 
@@ -4125,6 +4198,12 @@ section {
   padding-left: 100px;
 }
 
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .facts .fact {
+    padding-left: 80px;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 992px) {
   .facts .fact {
     padding: 45px 30px 55px;
@@ -4151,9 +4230,16 @@ section {
   }
 }
 
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .facts .fact img {
+    left: 35px;
+  }
+}
+
 @media (max-width: 767px) {
   .facts .fact img {
     left: 20px;
+    top: 33px;
   }
 }
 

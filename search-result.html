@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!-- fontAwesome -->
     <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/Chart.min.css">
     <!-- custom style css -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -168,7 +169,7 @@
       <div class="container">
         <div class="nutrients-content">
           <div class="row">
-          <div class="col-md-3 d-none d-md-block">
+          <div class="col-md-4 col-lg-3 d-none d-md-block">
             <div class="nutrient">
               <img src="imgs/protein.png" alt="">
               <div class="nutrient-info">
@@ -177,7 +178,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3 d-none d-md-block">
+          <div class="col-md-4 col-lg-3 d-none d-md-block">
             <div class="nutrient">
               <img src="imgs/fat.png" alt="">
               <div class="nutrient-info">
@@ -187,7 +188,7 @@
               
             </div>
           </div>
-          <div class="col-md-3 d-none d-md-block">
+          <div class="col-md-4 col-lg-3 d-none d-md-block">
             <div class="nutrient">
               <img src="imgs/carbs.png" alt="">
               <div class="nutrient-info">
@@ -196,12 +197,17 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3 text-center text-md-right">
+          <div class="col-md-12 col-lg-3 text-center text-md-right">
             <div class="chart">
-              <div class="bie-chart">
+              <canvas id="doughnut-chart" width="250" height="160"></canvas>
+              <div class="donut-inner">
                 20
                 <span>Kcal</span> 
               </div>
+              <!-- <div class="bie-chart">
+                20
+                <span>Kcal</span> 
+              </div> -->
               <div class="chart-info d-block d-md-none">
                 <h3>Protein <span><span class="quantity"> 1.089 g</span></span> <span class="percent"> (30%)</span></h3>
                 <h3>Fats <span><span class="quantity"> 0.33 g</span></span> <span class="percent fat"> (20%)</span></h3>
@@ -219,7 +225,7 @@
     <section class="micronutrients">
       <div class="container">
         <div class="row">
-          <div class="col-md-7 col-lg-8">
+          <div class="col-md-7 col-xl-8">
             <div class="micronutrients-content">
               <div class="table-content">
                 <table class="table">
@@ -302,7 +308,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-5 col-lg-4">
+          <div class="col-md-5 col-xl-4">
             <div class="activities">
               <h3 class="activities-title">Activities Needed to burn <span>20 Kcal</span></h3>
               <ul>
@@ -342,7 +348,7 @@
             <div class="fact">
               <img src="imgs/info.png" alt="">
               <h3>Cras mollis sit amet nisl et blandit</h3>
-              <p>Suspendisse dictum ultricies suscipit. Phasellus efficitur fermentum enim, eu varius metus mollis in. Sed sit amet tempor nisl, nec efficitur nibh. 
+              <p>Suspendisse dictum ultricies suscipit. Phasellus efficitur fermentum enim, eu varius metus mollis in. Sed sitadend amet tempor nisl, nec efficitur nibh. 
                 <button class="read-more">
                   <span class="circle"></span>
                   <span class="circle"></span>
@@ -389,7 +395,7 @@
               />
               <button class="primary-btn" type="submit">
                 Subscribe
-                <i class="fa fa-long-arrow-right"></i>
+                <img src="imgs/arrow-right.svg" alt="arrow">
               </button>
             </form>
             <div class="private-data">
@@ -510,6 +516,7 @@
     <script src="js/popper.min.js"></script>
     <!-- bootstrap js -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <!-- custom main js -->
     <script src="js/main.js"></script>
   </body>

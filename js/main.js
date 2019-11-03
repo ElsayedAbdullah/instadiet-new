@@ -151,3 +151,42 @@ $(function() {
       .val(newVal);
   });
 });
+
+new Chart(document.getElementById("doughnut-chart"), {
+  type: "doughnut",
+
+  data: {
+    labels: ["Protein", "Fats", "Carbs"],
+
+    datasets: [
+      {
+        label: "Macro Nutrients indgredients",
+        backgroundColor: ["#2a338f", "#ef5fa2", "#8f94b8"],
+        data: [30, 20, 50],
+        borderWidth: 0
+      }
+    ]
+  },
+  options: {
+    responsive: false,
+    cutoutPercentage: 80,
+    legend: {
+      labels: {
+        display: false,
+        boxWidth: 10
+      }
+    },
+    title: {
+      display: false,
+      text: "Macro Nutrients"
+    },
+    layout: {
+      padding: {
+        left: 20,
+        right: 0,
+        top: 20,
+        bottom: 0
+      }
+    }
+  }
+});
