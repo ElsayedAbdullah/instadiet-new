@@ -1,11 +1,11 @@
 $primaryColor: #ef5fa2;
-$secondaryColor: #2A338F;
+$secondaryColor: #2a338f;
 $floatLeft: right;
 $floatRight: left;
 $textRight: left;
 $textLeft: right;
 $desktop: "(max-width: 1366px)";
-$mobile:"(max-width: 767px)";
+$mobile: "(max-width: 767px)";
 $tablet: "(min-width: 768px) and (max-width: 992px)";
 $maxTab: "(max-width: 992px)";
 $betweentabdesk: "(min-width: 1000px) and (max-width: 1200px)";
@@ -19,8 +19,31 @@ body {
   font-family: "DinNext";
 }
 
-// header
+.primary-btn {
+  padding: rem(22px 40px 22px 60px);
 
+  @media #{$desktop} {
+    padding: rem(15px 35px 15px 50px);
+  }
+
+  &:hover {
+    background-color: darken($primaryColor, 5);
+
+    img {
+      left: 25px;
+      right: auto;
+    }
+  }
+
+  img {
+    right: auto;
+    left: 30px;
+    top: 40%;
+    transform: rotate(180deg);
+  }
+}
+
+// header
 
 .call-to-action {
   @media #{$mobile} {
@@ -72,7 +95,6 @@ body {
       @media #{$mobile} {
         text-align: $textLeft;
       }
-
     }
 
     .showcase-btn {
@@ -118,7 +140,6 @@ body {
 /* Start tailored Plan */
 .tailored-plan {
   .left-content {
-
     a {
       padding: rem(22px 40px 22px 60px);
 
@@ -132,22 +153,16 @@ body {
       }
 
       &:hover {
-
         i {
           left: 25px;
-
         }
       }
     }
   }
 
   .right-content {
-
-
     .diet-plan {
       .diet-plan-header {
-
-
         h3 {
           margin-left: 0;
           margin-right: 5px;
@@ -171,18 +186,15 @@ body {
             left: 180px;
           }
         }
-
       }
 
       .diet-slider {
         .diet {
-
           &.active {
             @media #{$mobile} {
               transform: scale(0.8) translate(0) !important;
               z-index: 10 !important;
             }
-
           }
 
           &.one {
@@ -195,16 +207,15 @@ body {
             transform: scale(0.9) translate(-70px);
 
             @media #{$mobile} {
-              transform: scale(0.7) translate(-45px)
+              transform: scale(0.7) translate(-45px);
             }
-
           }
 
           &.three {
             transform: scale(0.8) translate(-145px);
 
             @media #{$mobile} {
-              transform: scale(0.6) translate(-100px)
+              transform: scale(0.6) translate(-100px);
             }
           }
         }
@@ -253,16 +264,7 @@ body {
 
 /* Start prices */
 .prices {
-
   .price-plan {
-
-
-    .price-item {
-      .dollar {
-        // left: 30%;
-      }
-    }
-
     .features {
       padding-left: 0;
       padding-right: 30px;
@@ -276,7 +278,6 @@ body {
         }
       }
     }
-
   }
 }
 
@@ -284,7 +285,6 @@ body {
 
 /* Start Ideal Body Weight */
 .body-weight {
-
   .triangle {
     transform: translate(-50%, -50%) rotate(180deg);
 
@@ -296,12 +296,8 @@ body {
   }
 
   .instadiet-analysis {
-
     .front {
-
       h3 {
-
-
         img {
           margin: 16px 32px 16px 8px;
         }
@@ -338,7 +334,6 @@ body {
             background-position: 40px center;
           }
         }
-
       }
 
       .tips {
@@ -367,7 +362,6 @@ body {
             @media #{$mobile} {
               width: 65%;
             }
-
           }
         }
       }
@@ -377,10 +371,8 @@ body {
 
 /* End Ideal Body Weight */
 
-
 /* Start FAQ */
 #faq {
-
   .faq-left-side,
   .faq-right-side {
     li {
@@ -401,14 +393,12 @@ body {
 
 /* Start Footer */
 #main-footer {
-
   @media #{$mobile} {
     text-align: $textLeft;
   }
 
   .contact {
     li {
-
       &:nth-child(1) {
         img {
           margin-right: 0;
@@ -453,7 +443,6 @@ body {
     padding-left: 0;
     padding-right: rem(24px);
 
-
     @media #{$betweentabdesk} {
       padding-right: rem(10px);
     }
@@ -473,7 +462,6 @@ body {
   }
 
   .copyright {
-
     p {
       text-align: $textRight;
 
@@ -487,7 +475,6 @@ body {
 /* End Footer */
 
 .scroll-top {
-
   @media #{$maxTab} {
     left: auto;
     right: 50%;
@@ -499,7 +486,6 @@ body {
   @media #{$tablet} {
     bottom: 70px;
   }
-
 }
 
 // blog post
@@ -532,14 +518,369 @@ body {
 
 @media (min-width: 768px) {
   .offset-md-1 {
-        margin-right: 8.333333%;
-        margin-left: 0;
+    margin-right: 8.333333%;
+    margin-left: 0;
   }
 }
 
 @media (min-width: 992px) {
   .offset-lg-2 {
-            margin-right: 16.666667%;
-            margin-left: 0;
+    margin-right: 16.666667%;
+    margin-left: 0;
   }
 }
+
+// Start Food database page
+/* Start Showcase */
+.showcase-database {
+  .showcase-content {
+    .search-box {
+      form {
+        button {
+          right: auto;
+          left: 0;
+          border-radius: 10px 0 0 10px;
+        }
+      }
+    }
+  }
+}
+/* End Showcase */
+#contact-us {
+  .contact-us-widget {
+    h3 {
+      padding-left: 0;
+      padding-right: rem(55px);
+
+      @media #{$mobile} {
+        padding-left: 0;
+        padding-right: rem(30px);
+      }
+    }
+
+    ul {
+      li {
+        padding: 30px 60px 30px 0;
+
+        &:before {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+  .contact-us-form {
+    padding-left: 0;
+    padding-right: 30px;
+
+    @media #{$mobile} {
+      padding-right: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding-left: 0;
+      padding-right: rem(16px);
+    }
+
+    button[type="submit"] {
+      float: $floatRight;
+      padding: 17px 40px 17px 60px;
+
+      @media #{$mobile} {
+        float: none;
+        &:hover {
+          img {
+            left: 115px;
+            right: auto;
+          }
+        }
+        img {
+          left: 120px;
+          right: auto;
+        }
+      }
+    }
+  }
+}
+
+/* Start Newsletter */
+#newsletter {
+  form {
+    button[type="submit"] {
+      padding: 17px 40px 17px 60px;
+      @media #{$mobile} {
+        img {
+          left: 105px;
+          right: auto;
+        }
+        &:hover {
+          img {
+            left: 100px;
+            right: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .private-data {
+    text-align: $textRight;
+    @media #{$mobile} {
+      left: auto;
+      right: 50%;
+    }
+    p {
+      margin-left: 0;
+      margin-right: rem(8px);
+    }
+  }
+}
+
+/* End Newsletter */
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "\f104";
+  font-family: fontawesome;
+  padding-left: 0.5rem;
+}
+
+/* start search-info */
+.search-info {
+  .search-info-content {
+    .quantity {
+      label {
+        .button {
+          right: 0;
+          line-height: 19px;
+          @media #{$mobile} {
+            line-height: 30px;
+          }
+          &.inc {
+            @media #{$mobile} {
+              right: 0;
+            }
+          }
+          &.dec {
+            @media #{$mobile} {
+              left: 0;
+              right: auto;
+            }
+          }
+        }
+      }
+    }
+    .number {
+      margin-right: 25px;
+      @media #{$mobile} {
+        margin-right: 36px;
+        margin-left: 0;
+      }
+    }
+    .choose {
+      label {
+        span {
+          margin-right: 0;
+          margin-left: 5px;
+          padding: 13px 30px 13px 20px;
+          @media #{$betweentabdesk} {
+            padding: 13px 25px 13px 15px;
+          }
+          &:before {
+            left: auto;
+            right: 10px;
+            @media #{$betweentabdesk} {
+              left: 0;
+              right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media #{$mobile} {
+    .container {
+      .search-info-content {
+        .no-padd {
+          padding-left: 0;
+          padding-right: 15px;
+        }
+      }
+      .choose {
+        &-content {
+          overflow-x: auto;
+          .content {
+            label {
+              span {
+                padding: 6px 26px 5px 15px;
+                &:before {
+                  padding-top: 6px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Start nutrients */
+.nutrients {
+  .nutrients-content {
+    @media #{$betweentabdesk} {
+      padding: 0 30px 0 100px;
+    }
+    .nutrient {
+      padding-left: 0;
+      padding-right: 85px;
+      img {
+        left: auto;
+        right: 0;
+      }
+    }
+    .chart {
+      border-left: 0;
+      border-right: 1px solid #e3e4e8;
+      @media #{$maxTab} {
+        border-right: 0;
+      }
+
+      .donut-inner {
+        margin-right: 60px;
+        @media #{$betweentabdesk} {
+          margin-left: 0;
+          margin-right: 100px;
+        }
+      }
+
+      // .bie-chart {
+      //   width: 104px;
+      //   height: 104px;
+      //   border-radius: 50%;
+      //   border: 10px solid #8f94b8;
+      //   position: absolute;
+      //   top: 50%;
+      //   right: 0;
+      //   padding-top: 27px;
+      //   line-height: 22px;
+      //   transform: translateY(-50%);
+      //   border-bottom: 10px solid #ef5fa2;
+      //   border-right: 10px solid #2a338f;
+      //   border-top: 10px solid #2a338f;
+      //   font-weight: 600;
+      //   font-size: 24px;
+      //   text-align: center;
+      //   color: #41436b;
+      //   @media #{$mobile} {
+      //     width: 147px;
+      //     height: 147px;
+      //     border: 10px solid #8f94b8;
+      //     border-bottom: 10px solid #ef5fa2;
+      //     border-right: 10px solid #2a338f;
+      //     border-top: 10px solid #2a338f;
+      //     right: auto;
+      //     padding-top: 38px;
+      //     line-height: 30px;
+      //     top: 11%;
+      //     left: 50%;
+      //     transform: translateX(-50%);
+      //     font-size: 36px;
+      //   }
+      //   span {
+      //     font-size: 14px;
+      //     color: #595a6e;
+      //     display: block;
+      //     font-weight: 300;
+      //   }
+      // }
+    }
+  }
+  @media #{$mobile} {
+    .chart-info {
+      h3 {
+        &:before {
+          margin-right: 0;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+/* End nutrients */
+
+/* Start Micronutrients */
+.micronutrients {
+  .activities {
+    ul {
+      padding-left: 0;
+      padding-right: 60px;
+      @media #{$tablet} {
+        padding-left: 0;
+        padding-right: 30px;
+      }
+      li {
+        padding-left: 0;
+        padding-right: 100px;
+        &:before {
+          content: "أو";
+          transform: translateX(150%);
+          left: auto;
+          right: 50%;
+        }
+        &:after {
+          left: auto;
+          right: 0;
+        }
+
+        img {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+/* End Micronutrients */
+
+/* Start Facts */
+.facts {
+  .fact {
+    padding-left: 65px;
+    padding-right: 100px;
+    @media #{$betweentabdesk} {
+      padding-left: 65px;
+      padding-right: 80px;
+    }
+    @media #{$tablet} {
+      padding-right: 60px;
+    }
+    @media #{$mobile} {
+      padding: 30px 60px 40px 19px;
+    }
+    img {
+      left: auto;
+      right: 60px;
+      @media #{$tablet} {
+        left: auto;
+        right: 25px;
+      }
+      @media #{$betweentabdesk} {
+        left: auto;
+        right: 35px;
+      }
+      @media #{$mobile} {
+        left: auto;
+        right: 20px;
+      }
+    }
+    p {
+      .read-more {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+/* End Facts */

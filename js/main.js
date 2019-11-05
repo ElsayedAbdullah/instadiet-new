@@ -150,43 +150,100 @@ $(function() {
       .find("input")
       .val(newVal);
   });
-});
 
-new Chart(document.getElementById("doughnut-chart"), {
-  type: "doughnut",
+  new Chart(document.getElementById("doughnut-chart"), {
+    type: "doughnut",
 
-  data: {
-    labels: ["Protein", "Fats", "Carbs"],
+    data: {
+      labels: ["Protein", "Fats", "Carbs"],
 
-    datasets: [
-      {
-        label: "Macro Nutrients indgredients",
-        backgroundColor: ["#2a338f", "#ef5fa2", "#8f94b8"],
-        data: [30, 20, 50],
-        borderWidth: 0
-      }
-    ]
-  },
-  options: {
-    responsive: false,
-    cutoutPercentage: 80,
-    legend: {
-      labels: {
+      datasets: [
+        {
+          // label: "Macro Nutrients indgredients",
+          backgroundColor: ["#2a338f", "#ef5fa2", "#8f94b8"],
+          data: [30, 20, 50],
+          borderWidth: 0
+        }
+      ]
+    },
+    options: {
+      responsive: false,
+      cutoutPercentage: 80,
+      legend: {
+        labels: {
+          // display: false,
+          boxWidth: 10
+        }
+      },
+      title: {
         display: false,
-        boxWidth: 10
-      }
-    },
-    title: {
-      display: false,
-      text: "Macro Nutrients"
-    },
-    layout: {
-      padding: {
-        left: 20,
-        right: 0,
-        top: 20,
-        bottom: 0
+        text: "Macro Nutrients"
+      },
+      layout: {
+        padding: {
+          left: 20,
+          right: 0,
+          top: 20,
+          bottom: 0
+        }
       }
     }
+  });
+
+  $(".fact .read-more").on("click", function() {
+    $(this)
+      .prev(".more")
+      .toggleClass("hide");
+  });
+
+  // $(".show-more button").on("click", function() {
+  //   console.log("clicked");
+  //   $(this)
+  //     .text("View 10 Less")
+  //     .parent()
+  //     .siblings(".table-content")
+  //     .find(".row-hidden")
+  //     .toggleClass("hide");
+  // });
+
+  if ($("html").attr("lang") == "en") {
+    $(".show-more button").on("click", function() {
+      if ($(".row-hidden").hasClass("hide")) {
+        $(this)
+          .html("<button>View 10 Less <i class='fa fa-arrow-up'></i></button>")
+          .parent()
+          .siblings(".table-content")
+          .find(".row-hidden")
+          .removeClass("hide");
+      } else {
+        $(this)
+          .html(
+            "<button>View 10 More <i class='fa fa-arrow-down'></i></button>"
+          )
+          .parent()
+          .siblings(".table-content")
+          .find(".row-hidden")
+          .addClass("hide");
+      }
+    });
+  }
+  if ($("html").attr("lang") == "ar") {
+    $(".show-more button").on("click", function() {
+      if ($(".row-hidden").hasClass("hide")) {
+        $(this)
+          .html("<button>عرض 10 أقل <i class='fa fa-arrow-up'></i></button>")
+          .parent()
+          .siblings(".table-content")
+          .find(".row-hidden")
+          .removeClass("hide");
+      } else {
+        $(this)
+          .html("<button>عرض 10 أكثر <i class='fa fa-arrow-down'></i></button>")
+          .parent()
+          .siblings(".table-content")
+          .find(".row-hidden")
+          .addClass("hide");
+      }
+    });
   }
 });

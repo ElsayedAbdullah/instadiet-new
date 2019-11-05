@@ -1853,7 +1853,7 @@ header {
   position: fixed;
   bottom: rem(40px);
   right: 10px;
-  border: 1px solid #777;
+  border: 1px solid #dadae0;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
   background-color: #fff;
@@ -2740,9 +2740,11 @@ section {
         padding-top: 18px;
         padding-bottom: 18px;
         &:hover {
-          right: 75px;
+          img {
+            right: 75px;
+          }
         }
-        i {
+        img {
           right: 80px;
         }
       }
@@ -2862,11 +2864,13 @@ section {
         width: 100%;
         padding-top: 18px;
         padding-bottom: 18px;
-        i {
+        img {
           right: 80px;
         }
         &:hover {
-          right: 75px;
+          img {
+            right: 75px;
+          }
         }
       }
     }
@@ -2945,7 +2949,7 @@ section {
     .breadcrumb {
       position: absolute;
       bottom: -1px;
-      padding: 3px 44px;
+      padding: 6px 44px 3px;
       margin-bottom: 0;
       left: 50%;
       transform: translateX(-50%);
@@ -2964,11 +2968,11 @@ section {
         }
       }
       @media #{$tablet} {
-        padding: 3px 25px;
+        padding: 6px 25px 3px;
       }
       @media #{$mobile} {
         bottom: 55px;
-        padding: 3px 15px;
+        padding: 6px 15px 3px;
         background: none;
         border: 0;
         &-item {
@@ -3103,7 +3107,7 @@ section {
           display: none;
           &:checked {
             & ~ span {
-              border-color: $primaryColor;
+              border-color: rgba(239, 95, 162, 0.15);
               color: $primaryColor;
               background: rgba(239, 95, 162, 0.15);
               &:before {
@@ -3142,7 +3146,7 @@ section {
       button {
         font-size: 13px;
         line-height: 21px;
-        text-decoration-line: underline;
+        text-decoration: underline;
         color: #ef5fa2;
         background: none;
         border: 0;
@@ -3305,46 +3309,46 @@ section {
         }
       }
 
-      .bie-chart {
-        width: 104px;
-        height: 104px;
-        border-radius: 50%;
-        border: 10px solid #8f94b8;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        padding-top: 27px;
-        line-height: 22px;
-        transform: translateY(-50%);
-        border-bottom: 10px solid #ef5fa2;
-        border-right: 10px solid #2a338f;
-        border-top: 10px solid #2a338f;
-        font-weight: 600;
-        font-size: 24px;
-        text-align: center;
-        color: #41436b;
-        @media #{$mobile} {
-          width: 147px;
-          height: 147px;
-          border: 10px solid #8f94b8;
-          border-bottom: 10px solid #ef5fa2;
-          border-right: 10px solid #2a338f;
-          border-top: 10px solid #2a338f;
-          right: auto;
-          padding-top: 38px;
-          line-height: 30px;
-          top: 11%;
-          left: 50%;
-          transform: translateX(-50%);
-          font-size: 36px;
-        }
-        span {
-          font-size: 14px;
-          color: #595a6e;
-          display: block;
-          font-weight: 300;
-        }
-      }
+      // .bie-chart {
+      //   width: 104px;
+      //   height: 104px;
+      //   border-radius: 50%;
+      //   border: 10px solid #8f94b8;
+      //   position: absolute;
+      //   top: 50%;
+      //   right: 0;
+      //   padding-top: 27px;
+      //   line-height: 22px;
+      //   transform: translateY(-50%);
+      //   border-bottom: 10px solid #ef5fa2;
+      //   border-right: 10px solid #2a338f;
+      //   border-top: 10px solid #2a338f;
+      //   font-weight: 600;
+      //   font-size: 24px;
+      //   text-align: center;
+      //   color: #41436b;
+      //   @media #{$mobile} {
+      //     width: 147px;
+      //     height: 147px;
+      //     border: 10px solid #8f94b8;
+      //     border-bottom: 10px solid #ef5fa2;
+      //     border-right: 10px solid #2a338f;
+      //     border-top: 10px solid #2a338f;
+      //     right: auto;
+      //     padding-top: 38px;
+      //     line-height: 30px;
+      //     top: 11%;
+      //     left: 50%;
+      //     transform: translateX(-50%);
+      //     font-size: 36px;
+      //   }
+      //   span {
+      //     font-size: 14px;
+      //     color: #595a6e;
+      //     display: block;
+      //     font-weight: 300;
+      //   }
+      // }
     }
   }
   @media #{$mobile} {
@@ -3460,6 +3464,9 @@ section {
         }
         tbody {
           tr {
+            &.hide {
+              display: none;
+            }
             th {
               font-weight: 600;
               font-size: 14px;
@@ -3676,6 +3683,9 @@ section {
       line-height: 24px;
       color: #767791;
       margin-bottom: 0;
+      .more.hide {
+        display: none;
+      }
 
       .read-more {
         background-color: #e4e4eb;
@@ -3683,7 +3693,7 @@ section {
         width: 34px;
         height: 16px;
         border: 0;
-        line-height: 16px;
+        line-height: 0;
         text-align: center;
         margin-left: 10px;
         span.circle {
